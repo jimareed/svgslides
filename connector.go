@@ -1,12 +1,5 @@
 package svgslides
 
-import (
-	"encoding/json"
-	"fmt"
-	"math"
-	"strings"
-)
-
 const arrowHeadLength = 21
 
 type Point struct {
@@ -18,6 +11,8 @@ type Connector struct {
 	Shape1 int `json:"shape1"`
 	Shape2 int `json:"shape2"`
 }
+
+/*
 
 func connectorSlope(d *SvgSlides, c Connector) float64 {
 
@@ -166,3 +161,5 @@ func connectorP2(d *SvgSlides, c Connector) Point {
 
 	return p
 }
+
+*/

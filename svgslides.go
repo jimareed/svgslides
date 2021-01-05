@@ -1,24 +1,26 @@
 package svgslides
 
-import "bytes"
+import (
+	"bytes"
+	"fmt"
+)
 
 // SvgSlides
 type SvgSlides struct {
-	Width      float64     `json:"width"`
-	Height     float64     `json:"height"`
-	RectWidth  float64     `json:"rectWidth"`
-	RectHeight float64     `json:"rectHeight"`
-	Shapes     []Shape     `json:"shapes"`
-	Connectors []Connector `json:"connectors"`
+	Config         Config  `json:"config"`
+	Slides         []Slide `json:"slides"`
+	CurrentSlideId int     `json:"currentSlideId"`
+	NextSlideId    int     `json:"nextSlideId"`
+	NextObjId      int     `json:"nextObjId"`
 	//	Animation  Animation   `json:"animation"`
 }
 
 // SvgSlidesConfig
 type Config struct {
-	Width      float64
-	Height     float64
-	RectWidth  float64
-	RectHeight float64
+	Width      float64 `json:"width"`
+	Height     float64 `json:"height"`
+	RectWidth  float64 `json:"rectWidth"`
+	RectHeight float64 `json:"rectHeight"`
 }
 
 func New(config Config) *SvgSlides {
@@ -36,22 +38,30 @@ func New(config Config) *SvgSlides {
 	if config.RectHeight == 0 {
 		config.RectHeight = 80
 	}
-	slides.Width = config.Width
-	slides.Height = config.Height
-	slides.RectWidth = config.RectWidth
-	slides.RectHeight = config.RectHeight
+	slides.Config = config
+	slides.CurrentSlideId = 0
+	slides.NextSlideId = 1
+	slides.NextObjId = 1
 
 	return &slides
 }
 
-func (slides *SvgSlides) NewSlide(title string) error {
+func (slides *SvgSlides) AddSlide(title string) error {
+	slide := Slide{}
+	slide.Id = slides.NextSlideId
+	slide.Title = title
+
+	slides.Slides = append(slides.Slides, slide)
+	slides.CurrentSlideId = slide.Id
+	slides.NextSlideId++
 	return nil
 }
 
 func (slides *SvgSlides) AddRect(label string, x float64, y float64) (Shape, error) {
 
-	shape := Shape{x, y, slides.RectWidth, slides.RectHeight, "rect", "", 0, "", "", 0, 0}
-	slides.Shapes = append(slides.Shapes, shape)
+	shape := Shape{slides.NextObjId, x, y, slides.Config.RectWidth, slides.Config.RectHeight, "rect", "", 0, "", "", 0, 0}
+	slides.NextObjId++
+	//	slides.Shapes = append(slides.Shapes, shape)
 	return shape, nil
 }
 
@@ -60,10 +70,29 @@ func (slides *SvgSlides) AddConnector(rect1 Shape, rect2 Shape) error {
 	return nil
 }
 
-func (slides *SvgSlides) AddAnimation(timeInSec int, autoPlay bool) error {
+func (slides *SvgSlides) AddAnimation(autoPlay bool) error {
 	return nil
 }
 
 func (slides *SvgSlides) Render(buffer *bytes.Buffer) error {
+
+	err := slides.render(buffer)
+
+	return err
+}
+
+func (slides *SvgSlides) render(buffer *bytes.Buffer) error {
+
+	fmt.Fprintf(buffer, "<svg width=\"%.2f\" height=\"%.2f\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" >\n", slides.Config.Width, slides.Config.Height)
+
+	if len(slides.Slides) > 0 {
+		fmt.Fprintf(buffer, " <use id=\"slide%d\" xlink:href=\"#slide%d-def\" x=\"0\" y=\"0\" />\n", slides.Slides[0].Id, slides.Slides[0].Id)
+	}
+
+	for _, slide := range slides.Slides {
+		slide.render(buffer, slides.Config)
+	}
+	fmt.Fprintf(buffer, "</svg>\n")
+
 	return nil
 }

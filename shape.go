@@ -8,6 +8,7 @@ import (
 
 // Shape
 type Shape struct {
+	Id     int     `json:"id`
 	X      float64 `json:"x,omitempty"`
 	Y      float64 `json:"y,omitempty"`
 	Width  float64 `json:"width,omitempty"`

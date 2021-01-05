@@ -1,0 +1,9 @@
+<svg width="1024.00" height="768.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+ <use id="slide1" xlink:href="#slide1-def" x="0" y="0" />
+ <def>
+  <g id="slide1-def">
+   <text x="30" y="40" fill="black" font-size="32px">svgslides</text>
+  </g>
+ </def>
+</svg>
+
