@@ -2,6 +2,7 @@ package svgslides
 
 import (
 	"bytes"
+	"errors"
 	"fmt"
 )
 
@@ -33,10 +34,10 @@ func New(config Config) *SvgSlides {
 		config.Height = 768
 	}
 	if config.RectWidth == 0 {
-		config.RectWidth = 120
+		config.RectWidth = 180
 	}
 	if config.RectHeight == 0 {
-		config.RectHeight = 80
+		config.RectHeight = 120
 	}
 	slides.Config = config
 	slides.CurrentSlideId = 0
@@ -57,15 +58,30 @@ func (slides *SvgSlides) AddSlide(title string) error {
 	return nil
 }
 
-func (slides *SvgSlides) AddRect(label string, x float64, y float64) (Shape, error) {
+func (slides *SvgSlides) getSlide(slideId int) (*Slide, error) {
 
-	shape := Shape{slides.NextObjId, x, y, slides.Config.RectWidth, slides.Config.RectHeight, "rect", "", 0, "", "", 0, 0}
-	slides.NextObjId++
-	//	slides.Shapes = append(slides.Shapes, shape)
-	return shape, nil
+	for i := 0; i < len(slides.Slides); i++ {
+		if slideId == slides.Slides[i].Id {
+			return &(slides.Slides[i]), nil
+		}
+	}
+	return nil, errors.New("invalid slide")
 }
 
-func (slides *SvgSlides) AddConnector(rect1 Shape, rect2 Shape) error {
+func (slides *SvgSlides) AddRect(label string, x float64, y float64) (*Shape, error) {
+
+	slide, err := slides.getSlide(slides.CurrentSlideId)
+	if err != nil {
+		return nil, err
+	}
+
+	shape, err := slide.addRect(slides.NextObjId, label, x, y, slides.Config)
+	slides.NextObjId++
+
+	return shape, err
+}
+
+func (slides *SvgSlides) AddConnector(rect1 *Shape, rect2 *Shape) error {
 
 	return nil
 }

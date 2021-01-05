@@ -1,6 +1,7 @@
 package svgslides
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
 	"strings"
@@ -11,13 +12,12 @@ type Shape struct {
 	Id     int     `json:"id`
 	X      float64 `json:"x,omitempty"`
 	Y      float64 `json:"y,omitempty"`
+	Label  string  `json:"label,omitempty"`
 	Width  float64 `json:"width,omitempty"`
 	Height float64 `json:"height,omitempty"`
 	Type   string  `json:"type,omitempty"`
-	Desc   string  `json:"desc,omitempty"`
 	Size   int     `json:"size,omitempty"`
 	Style  string  `json:"style,omitempty"`
-	Slide  string  `json:"slide,omitempty"`
 	X2     float64 `json:"x2,omitempty"`
 	Y2     float64 `json:"y2,omitempty"`
 }
@@ -48,7 +48,7 @@ func shapeToSvg(shape Shape, transitionId int) string {
 	if shape.Type == "text" {
 		svg += fmt.Sprintf(
 			"<text class=\"transition%d\" x=\"%f\" y=\"%f\" fill=\"black\" font-size=\"%dpx\">%s</text>\n",
-			transitionId, shape.X, shape.Y, shape.Size, shape.Desc)
+			transitionId, shape.X, shape.Y, shape.Size, shape.Label)
 	} else if shape.Type == "circle" {
 		svg += fmt.Sprintf(
 			"<circle class=\"transition%d\" cx=\"%f\" cy=\"%f\" r=\"%f\" stroke=\"black\" fill=\"transparent\" stroke-width=\"4\" \"></circle>\n",
@@ -63,13 +63,21 @@ func shapeToSvg(shape Shape, transitionId int) string {
 			strokeWidth = 0
 		}
 		onClick := ""
-		if shape.Slide != "" {
-			onClick = fmt.Sprintf("onclick=\"location.href='%s'\"", shape.Slide)
-		}
+		//		if shape.Slide != "" {
+		//			onClick = fmt.Sprintf("onclick=\"location.href='%s'\"", shape.Slide)
+		//		}
 		svg += fmt.Sprintf(
 			"<rect class=\"transition%d\" x=\"%f\" y=\"%f\" width=\"%f\" height=\"%f\" id=\"1\" stroke=\"black\" fill=\"transparent\" stroke-width=\"%d\" %s\"></rect>\n",
 			transitionId, shape.X, shape.Y, shape.Width, shape.Height, strokeWidth, onClick)
 	}
 
 	return svg
+}
+
+func (shape *Shape) render(buffer *bytes.Buffer, config Config) error {
+
+	fmt.Fprintf(buffer, "   <rect x=\"%.2f\" y=\"%.2f\" width=\"%.2f\" height=\"%.2f\" id=\"%d\" stroke=\"black\" fill=\"transparent\" stroke-width=\"4\" />\n",
+		shape.X, shape.Y, config.RectWidth, config.RectHeight, shape.Id)
+
+	return nil
 }

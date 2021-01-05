@@ -1,9 +1,9 @@
 # svgslides
 
-Go library to generate simple svg presentations
+Go library to generate simple svg presentations.
 
 <p  align="center">
-    <img src="./examples/example1/output.svg" width="50%" height="50%" alt="svgslides output"/>
+    <img src="./examples/example1/output.svg" alt="svgslides output"/>
 </p>
 
 ## usage
@@ -12,18 +12,19 @@ Go library to generate simple svg presentations
 package main
 
 import (
-    "fmt"
     "bytes"
+    "fmt"
+
     "github.com/jimareed/svgslides"
 )
 
 func main() {
     slides := svgslides.New(svgslides.Config{})
     slides.AddSlide("svgslides")
-    rect1, _ := slides.AddRect("Go library", 310, 200)
-    rect2, _ := slides.AddRect("Simple presentations", 310, 200)
-    rect3, _ := slides.AddRect("With animation", 310, 200)
-    rect4, _ := slides.AddRect("In SVG|format", 310, 200)
+    rect1, _ := slides.AddRect("Go library", 166, 132)
+    rect2, _ := slides.AddRect("Simple presentations", 166, 516)
+    rect3, _ := slides.AddRect("With animation", 678, 516)
+    rect4, _ := slides.AddRect("In SVG|format", 678, 132)
     slides.AddConnector(rect1, rect2)
     slides.AddConnector(rect2, rect3)
     slides.AddConnector(rect3, rect4)

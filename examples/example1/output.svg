@@ -2,7 +2,11 @@
  <use id="slide1" xlink:href="#slide1-def" x="0" y="0" />
  <def>
   <g id="slide1-def">
-   <text x="30" y="40" fill="black" font-size="32px">svgslides</text>
+   <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="black" font-size="32px">svgslides</text>
+   <rect x="166.00" y="132.00" width="180.00" height="120.00" id="1" stroke="black" fill="transparent" stroke-width="4" />
+   <rect x="166.00" y="516.00" width="180.00" height="120.00" id="2" stroke="black" fill="transparent" stroke-width="4" />
+   <rect x="678.00" y="516.00" width="180.00" height="120.00" id="3" stroke="black" fill="transparent" stroke-width="4" />
+   <rect x="678.00" y="132.00" width="180.00" height="120.00" id="4" stroke="black" fill="transparent" stroke-width="4" />
   </g>
  </def>
 </svg>
