@@ -1,4 +1,4 @@
-<svg width="1024.00" height="768.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<svg id="canvas" width="1024.00" height="768.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
  <use id="slide1" xlink:href="#slide1-def" x="0" y="0" />
  <defs>
   <g id="slide1-def">

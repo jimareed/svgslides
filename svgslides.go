@@ -89,6 +89,19 @@ func (slides *SvgSlides) AddRect(label string, x float64, y float64) (*Shape, er
 	return shape, err
 }
 
+func (slides *SvgSlides) AddText(label string, x float64, y float64) (*Shape, error) {
+
+	slide, err := slides.getSlide(slides.CurrentSlideId)
+	if err != nil {
+		return nil, err
+	}
+
+	shape, err := slide.addText(slides.NextObjId, label, x, y, slides.Config)
+	slides.NextObjId++
+
+	return shape, err
+}
+
 func (slides *SvgSlides) AddConnector(rect1 *Shape, rect2 *Shape) error {
 
 	slide, err := slides.getSlide(slides.CurrentSlideId)
@@ -119,10 +132,15 @@ func (slides *SvgSlides) Render(buffer *bytes.Buffer) error {
 
 func (slides *SvgSlides) render(buffer *bytes.Buffer) error {
 
-	fmt.Fprintf(buffer, "<svg width=\"%.2f\" height=\"%.2f\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" >\n", slides.Config.Width, slides.Config.Height)
+	fmt.Fprintf(buffer, "<svg id=\"canvas\" width=\"%.2f\" height=\"%.2f\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" >\n", slides.Config.Width, slides.Config.Height)
 
 	if len(slides.Slides) > 0 {
 		fmt.Fprintf(buffer, " <use id=\"slide%d\" xlink:href=\"#slide%d-def\" x=\"0\" y=\"0\" />\n", slides.Slides[0].Id, slides.Slides[0].Id)
+	}
+
+	if len(slides.Slides) > 1 {
+		fmt.Fprintf(buffer, " <polygon class=\"nextslide-transition\" points=\"990 740, 975 753 990 766\"    stroke=\"lightgrey\" fill=\"lightgrey\" onmousedown=\"previousSlide(evt)\" onmouseover=\"evt.target.setAttribute('fill', 'black');\" onmouseout=\"evt.target.setAttribute('fill','lightgrey');\"></polygon>\n")
+		fmt.Fprintf(buffer, " <polygon class=\"nextslide-transition\" points=\"1000 740, 1015 753 1000 766\" stroke=\"lightgrey\" fill=\"lightgrey\" onmousedown=\"nextSlide(evt)\"     onmouseover=\"evt.target.setAttribute('fill', 'black');\" onmouseout=\"evt.target.setAttribute('fill','lightgrey');\"></polygon>\n")
 	}
 
 	slides.Animation.updateSequence(slides)
@@ -130,7 +148,84 @@ func (slides *SvgSlides) render(buffer *bytes.Buffer) error {
 	for _, slide := range slides.Slides {
 		slide.render(buffer, slides.Config, slides.Animation)
 	}
+
+	if len(slides.Slides) > 1 {
+		slides.renderPageButtons(buffer)
+	}
+
 	fmt.Fprintf(buffer, "</svg>\n")
+
+	return nil
+}
+
+func (slides *SvgSlides) renderPageButtons(buffer *bytes.Buffer) error {
+
+	fmt.Fprintf(buffer, " <script type=\"text/javascript\">\n")
+	fmt.Fprintf(buffer, "  var svgNS = \"http://www.w3.org/2000/svg\";\n")
+	fmt.Fprintf(buffer, "  var xlinkNS = \"http://www.w3.org/1999/xlink\";\n")
+	fmt.Fprintf(buffer, "  var currentIndex = 1;\n")
+	fmt.Fprintf(buffer, "  var maxIndex = %d;\n", len(slides.Slides))
+
+	fmt.Fprintf(buffer, "  function previousSlide(evt) {\n")
+
+	fmt.Fprintf(buffer, "  prevIndex = currentIndex - 1;\n")
+	fmt.Fprintf(buffer, "  if (prevIndex === 0) {\n")
+	fmt.Fprintf(buffer, "   prevIndex = 1;\n")
+	fmt.Fprintf(buffer, "  }\n")
+
+	fmt.Fprintf(buffer, "   canvas = document.getElementById('canvas');\n")
+	fmt.Fprintf(buffer, "   prevslide = document.getElementById('slide' + currentIndex);\n")
+	fmt.Fprintf(buffer, "   nextslide = document.createElementNS(svgNS, \"use\");\n")
+	fmt.Fprintf(buffer, "   nextslide.setAttributeNS(null, \"id\", \"slide\" + prevIndex);\n")
+	fmt.Fprintf(buffer, "   nextslide.setAttributeNS(null, \"x\", 0);\n")
+	fmt.Fprintf(buffer, "   nextslide.setAttributeNS(null, \"y\", 0);\n")
+	fmt.Fprintf(buffer, "   nextslide.setAttributeNS(xlinkNS, \"xlink:href\", \"#\" + nextslide.id + \"-def\");\n")
+	fmt.Fprintf(buffer, "   canvas.removeChild(prevslide)\n")
+	fmt.Fprintf(buffer, "   canvas.appendChild(nextslide)\n")
+
+	fmt.Fprintf(buffer, "   var animations = Array.from(svg.querySelectorAll(\"animate\"));\n")
+	fmt.Fprintf(buffer, "   animations.forEach(function (item, index) {\n")
+	fmt.Fprintf(buffer, "    if (item.id.includes('step1')) {\n")
+	fmt.Fprintf(buffer, "     item.beginElement();\n")
+	fmt.Fprintf(buffer, "    }\n")
+	fmt.Fprintf(buffer, "   });\n")
+	fmt.Fprintf(buffer, "   currentIndex = prevIndex\n")
+	fmt.Fprintf(buffer, "  }\n")
+
+	fmt.Fprintf(buffer, "  function nextSlide(evt) {\n")
+	fmt.Fprintf(buffer, "   nextIndex = currentIndex + 1;\n")
+	fmt.Fprintf(buffer, "   if (nextIndex > maxIndex) {\n")
+	fmt.Fprintf(buffer, "    nextIndex = maxIndex;\n")
+	fmt.Fprintf(buffer, "   }\n")
+	fmt.Fprintf(buffer, "   svg = document.getElementById('canvas');\n")
+	fmt.Fprintf(buffer, "   prevslide = document.getElementById('slide' + currentIndex);\n")
+	fmt.Fprintf(buffer, "   nextslide = document.createElementNS(svgNS, \"use\");\n")
+	fmt.Fprintf(buffer, "   nextslide.setAttributeNS(null, \"id\", \"slide\" + nextIndex);\n")
+	fmt.Fprintf(buffer, "   nextslide.setAttributeNS(null, \"x\", 0);\n")
+	fmt.Fprintf(buffer, "   nextslide.setAttributeNS(null, \"y\", 0);\n")
+	fmt.Fprintf(buffer, "   nextslide.setAttributeNS(xlinkNS, \"xlink:href\", \"#\" + nextslide.id + \"-def\");\n")
+	fmt.Fprintf(buffer, "   svg.removeChild(prevslide)\n")
+	fmt.Fprintf(buffer, "   svg.appendChild(nextslide)\n")
+
+	fmt.Fprintf(buffer, "   var animations = Array.from(svg.querySelectorAll(\"animate\"));\n")
+	fmt.Fprintf(buffer, "   animations.forEach(function (item, index) {\n")
+	fmt.Fprintf(buffer, "    if (item.id.includes('step1')) {\n")
+	fmt.Fprintf(buffer, "     item.beginElement();\n")
+	fmt.Fprintf(buffer, "    }\n")
+	fmt.Fprintf(buffer, "   });\n")
+	fmt.Fprintf(buffer, "   currentIndex = nextIndex\n")
+	fmt.Fprintf(buffer, "  }\n")
+	fmt.Fprintf(buffer, " </script>\n")
+
+	fmt.Fprintf(buffer, " <style>\n")
+	fmt.Fprintf(buffer, "  .nextslide-transition {	animation-name: transitionOpacity;	animation-duration: 6s;	animation-iteration-count: 1;}\n")
+
+	fmt.Fprintf(buffer, "  @keyframes transitionOpacity {\n")
+	fmt.Fprintf(buffer, "   0%%   { opacity: 0; }\n")
+	fmt.Fprintf(buffer, "   50%%   { opacity: 0; }\n")
+	fmt.Fprintf(buffer, "   100%% { opacity: 1; }\n")
+	fmt.Fprintf(buffer, "  }\n")
+	fmt.Fprintf(buffer, " </style>\n")
 
 	return nil
 }

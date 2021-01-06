@@ -24,6 +24,23 @@ func (slide *Slide) addRect(id int, label string, x float64, y float64, config C
 	shape.Y = y
 	shape.Width = config.RectWidth
 	shape.Height = config.RectHeight
+	shape.Type = "rect"
+
+	slide.Shapes = append(slide.Shapes, shape)
+
+	return &shape, nil
+}
+
+func (slide *Slide) addText(id int, label string, x float64, y float64, config Config) (*Shape, error) {
+
+	shape := Shape{}
+	shape.Id = id
+	shape.Label = label
+	shape.X = x
+	shape.Y = y
+	shape.Width = config.RectWidth
+	shape.Height = config.RectHeight
+	shape.Type = "text"
 
 	slide.Shapes = append(slide.Shapes, shape)
 

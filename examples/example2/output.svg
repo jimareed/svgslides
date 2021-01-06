@@ -1,0 +1,109 @@
+<svg id="canvas" width="1024.00" height="768.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+ <use id="slide1" xlink:href="#slide1-def" x="0" y="0" />
+ <polygon class="nextslide-transition" points="990 740, 975 753 990 766"    stroke="lightgrey" fill="lightgrey" onmousedown="previousSlide(evt)" onmouseover="evt.target.setAttribute('fill', 'black');" onmouseout="evt.target.setAttribute('fill','lightgrey');"></polygon>
+ <polygon class="nextslide-transition" points="1000 740, 1015 753 1000 766" stroke="lightgrey" fill="lightgrey" onmousedown="nextSlide(evt)"     onmouseover="evt.target.setAttribute('fill', 'black');" onmouseout="evt.target.setAttribute('fill','lightgrey');"></polygon>
+ <defs>
+  <g id="slide1-def">
+   <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="black" font-size="32px">slide 1
+    <animate id="slide1beginstep1" attributeName="opacity" from="0" to="0" dur="1.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1beginstep2" attributeName="opacity" from="0" to="1" dur="1.50" begin="slide1beginstep1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="768.00" y="576.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="24px">This is slide 1
+    <animate id="slide1obj2step1" attributeName="opacity" from="0" to="0" dur="3.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj2step2" attributeName="opacity" from="0" to="1" dur="3.00" begin="slide1obj2step1.end" repeatCount="1" restart="always" />
+   </text>
+  </g>
+  <marker id="arrowhead" markerWidth="5" markerHeight="3.5" refX="0" refY="1.75" orient="auto">
+   <polygon points="0 0, 5 1.75 0 3.5"></polygon>
+  </marker>
+ </defs>
+ <defs>
+  <g id="slide2-def">
+   <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="black" font-size="32px">slide 2
+    <animate id="slide2beginstep1" attributeName="opacity" from="0" to="0" dur="1.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide2beginstep2" attributeName="opacity" from="0" to="1" dur="1.50" begin="slide2beginstep1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="768.00" y="576.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="24px">Followed by slide 2
+    <animate id="slide2obj4step1" attributeName="opacity" from="0" to="0" dur="3.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide2obj4step2" attributeName="opacity" from="0" to="1" dur="3.00" begin="slide2obj4step1.end" repeatCount="1" restart="always" />
+   </text>
+  </g>
+  <marker id="arrowhead" markerWidth="5" markerHeight="3.5" refX="0" refY="1.75" orient="auto">
+   <polygon points="0 0, 5 1.75 0 3.5"></polygon>
+  </marker>
+ </defs>
+ <defs>
+  <g id="slide3-def">
+   <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="black" font-size="32px">slide 3
+    <animate id="slide3beginstep1" attributeName="opacity" from="0" to="0" dur="1.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3beginstep2" attributeName="opacity" from="0" to="1" dur="1.50" begin="slide3beginstep1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="768.00" y="576.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="24px">Last slide
+    <animate id="slide3obj6step1" attributeName="opacity" from="0" to="0" dur="3.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj6step2" attributeName="opacity" from="0" to="1" dur="3.00" begin="slide3obj6step1.end" repeatCount="1" restart="always" />
+   </text>
+  </g>
+  <marker id="arrowhead" markerWidth="5" markerHeight="3.5" refX="0" refY="1.75" orient="auto">
+   <polygon points="0 0, 5 1.75 0 3.5"></polygon>
+  </marker>
+ </defs>
+ <script type="text/javascript">
+  var svgNS = "http://www.w3.org/2000/svg";
+  var xlinkNS = "http://www.w3.org/1999/xlink";
+  var currentIndex = 1;
+  var maxIndex = 3;
+  function previousSlide(evt) {
+  prevIndex = currentIndex - 1;
+  if (prevIndex === 0) {
+   prevIndex = 1;
+  }
+   canvas = document.getElementById('canvas');
+   prevslide = document.getElementById('slide' + currentIndex);
+   nextslide = document.createElementNS(svgNS, "use");
+   nextslide.setAttributeNS(null, "id", "slide" + prevIndex);
+   nextslide.setAttributeNS(null, "x", 0);
+   nextslide.setAttributeNS(null, "y", 0);
+   nextslide.setAttributeNS(xlinkNS, "xlink:href", "#" + nextslide.id + "-def");
+   canvas.removeChild(prevslide)
+   canvas.appendChild(nextslide)
+   var animations = Array.from(svg.querySelectorAll("animate"));
+   animations.forEach(function (item, index) {
+    if (item.id.includes('step1')) {
+     item.beginElement();
+    }
+   });
+   currentIndex = prevIndex
+  }
+  function nextSlide(evt) {
+   nextIndex = currentIndex + 1;
+   if (nextIndex > maxIndex) {
+    nextIndex = maxIndex;
+   }
+   svg = document.getElementById('canvas');
+   prevslide = document.getElementById('slide' + currentIndex);
+   nextslide = document.createElementNS(svgNS, "use");
+   nextslide.setAttributeNS(null, "id", "slide" + nextIndex);
+   nextslide.setAttributeNS(null, "x", 0);
+   nextslide.setAttributeNS(null, "y", 0);
+   nextslide.setAttributeNS(xlinkNS, "xlink:href", "#" + nextslide.id + "-def");
+   svg.removeChild(prevslide)
+   svg.appendChild(nextslide)
+   var animations = Array.from(svg.querySelectorAll("animate"));
+   animations.forEach(function (item, index) {
+    if (item.id.includes('step1')) {
+     item.beginElement();
+    }
+   });
+   currentIndex = nextIndex
+  }
+ </script>
+ <style>
+  .nextslide-transition {	animation-name: transitionOpacity;	animation-duration: 6s;	animation-iteration-count: 1;}
+  @keyframes transitionOpacity {
+   0%   { opacity: 0; }
+   50%   { opacity: 0; }
+   100% { opacity: 1; }
+  }
+ </style>
+</svg>
+
