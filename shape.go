@@ -9,17 +9,18 @@ import (
 
 // Shape
 type Shape struct {
-	Id     int     `json:"id`
-	X      float64 `json:"x,omitempty"`
-	Y      float64 `json:"y,omitempty"`
-	Label  string  `json:"label,omitempty"`
-	Width  float64 `json:"width,omitempty"`
-	Height float64 `json:"height,omitempty"`
-	Type   string  `json:"type,omitempty"`
-	Size   int     `json:"size,omitempty"`
-	Style  string  `json:"style,omitempty"`
-	X2     float64 `json:"x2,omitempty"`
-	Y2     float64 `json:"y2,omitempty"`
+	Id        int     `json:"id"`
+	X         float64 `json:"x"`
+	Y         float64 `json:"y"`
+	Label     string  `json:"label"`
+	Width     float64 `json:"width"`
+	Height    float64 `json:"height"`
+	Type      string  `json:"type"`
+	Size      int     `json:"size"`
+	LabelSize int     `json:"labelSize"`
+	Style     string  `json:"style"`
+	X2        float64 `json:"x2"`
+	Y2        float64 `json:"y2"`
 }
 
 func shapeFromString(input string) (Shape, error) {
@@ -78,6 +79,17 @@ func (shape *Shape) render(buffer *bytes.Buffer, config Config) error {
 
 	fmt.Fprintf(buffer, "   <rect x=\"%.2f\" y=\"%.2f\" width=\"%.2f\" height=\"%.2f\" id=\"%d\" stroke=\"black\" fill=\"transparent\" stroke-width=\"4\" />\n",
 		shape.X, shape.Y, config.RectWidth, config.RectHeight, shape.Id)
+
+	if shape.Label != "" {
+		x := shape.X + shape.Width/2
+		y := shape.Y + shape.Height/2
+		labelSize := shape.LabelSize
+		if labelSize == 0 {
+			labelSize = config.LabelSize
+		}
+		label := Label{x, y, shape.Label, labelSize}
+		label.render(buffer, config)
+	}
 
 	return nil
 }

@@ -22,6 +22,7 @@ type Config struct {
 	Height     float64 `json:"height"`
 	RectWidth  float64 `json:"rectWidth"`
 	RectHeight float64 `json:"rectHeight"`
+	LabelSize  int     `json:"labelSize"`
 }
 
 func New(config Config) *SvgSlides {
@@ -38,6 +39,9 @@ func New(config Config) *SvgSlides {
 	}
 	if config.RectHeight == 0 {
 		config.RectHeight = 120
+	}
+	if config.LabelSize == 0 {
+		config.LabelSize = 24
 	}
 	slides.Config = config
 	slides.CurrentSlideId = 0
@@ -83,7 +87,15 @@ func (slides *SvgSlides) AddRect(label string, x float64, y float64) (*Shape, er
 
 func (slides *SvgSlides) AddConnector(rect1 *Shape, rect2 *Shape) error {
 
-	return nil
+	slide, err := slides.getSlide(slides.CurrentSlideId)
+	if err != nil {
+		return err
+	}
+
+	_, err = slide.addConnector(slides.NextObjId, rect1, rect2)
+	slides.NextObjId++
+
+	return err
 }
 
 func (slides *SvgSlides) AddAnimation(autoPlay bool) error {
