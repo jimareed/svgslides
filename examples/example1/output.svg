@@ -2,22 +2,64 @@
  <use id="slide1" xlink:href="#slide1-def" x="0" y="0" />
  <defs>
   <g id="slide1-def">
-   <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="black" font-size="32px">svgslides</text>
-   <rect x="166.00" y="132.00" width="180.00" height="120.00" id="1" stroke="black" fill="transparent" stroke-width="4" />
-   <text x="256.00" y="192.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="24px">Go library</text>
-   <rect x="166.00" y="516.00" width="180.00" height="120.00" id="2" stroke="black" fill="transparent" stroke-width="4" />
-   <text x="256.00" y="564.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="24px">Simple</text>
-   <text x="256.00" y="588.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="24px">Presentations</text>
-   <rect x="678.00" y="516.00" width="180.00" height="120.00" id="3" stroke="black" fill="transparent" stroke-width="4" />
-   <text x="768.00" y="564.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="24px">With</text>
-   <text x="768.00" y="588.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="24px">Animation</text>
-   <rect x="678.00" y="132.00" width="180.00" height="120.00" id="4" stroke="black" fill="transparent" stroke-width="4" />
-   <text x="768.00" y="180.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="24px">In SVG</text>
-   <text x="768.00" y="204.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="24px">Format</text>
-   <line x1="256.00" y1="252.00" x2="256.00" y2="495.00" stroke="black" stroke-width="4" marker-end="url(#arrowhead)"	/>
-   <line x1="346.00" y1="576.00" x2="657.00" y2="576.00" stroke="black" stroke-width="4" marker-end="url(#arrowhead)"	/>
-   <line x1="768.00" y1="516.00" x2="768.00" y2="273.00" stroke="black" stroke-width="4" marker-end="url(#arrowhead)"	/>
-  </g>
+   <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="black" font-size="32px">svgslides
+    <animate id="slide1beginstep1" attributeName="opacity" from="0" to="0" dur="1.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1beginstep2" attributeName="opacity" from="0" to="1" dur="1.50" begin="slide1beginstep1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="166.00" y="132.00" width="180.00" height="120.00" id="2" stroke="black" fill="transparent" stroke-width="4">
+    <animate id="slide1obj2step1" attributeName="opacity" from="0" to="0" dur="3.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj2step2" attributeName="opacity" from="0" to="1" dur="3.00" begin="slide1obj2step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <text x="256.00" y="192.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="24px">Go library
+    <animate id="slide1obj2step1" attributeName="opacity" from="0" to="0" dur="3.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj2step2" attributeName="opacity" from="0" to="1" dur="3.00" begin="slide1obj2step1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="166.00" y="516.00" width="180.00" height="120.00" id="3" stroke="black" fill="transparent" stroke-width="4">
+    <animate id="slide1obj3step1" attributeName="opacity" from="0" to="0" dur="4.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj3step2" attributeName="opacity" from="0" to="1" dur="4.50" begin="slide1obj3step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <text x="256.00" y="564.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="24px">Simple
+    <animate id="slide1obj3step1" attributeName="opacity" from="0" to="0" dur="4.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj3step2" attributeName="opacity" from="0" to="1" dur="4.50" begin="slide1obj3step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="256.00" y="588.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="24px">Presentations
+    <animate id="slide1obj3step1" attributeName="opacity" from="0" to="0" dur="4.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj3step2" attributeName="opacity" from="0" to="1" dur="4.50" begin="slide1obj3step1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="678.00" y="516.00" width="180.00" height="120.00" id="4" stroke="black" fill="transparent" stroke-width="4">
+    <animate id="slide1obj4step1" attributeName="opacity" from="0" to="0" dur="6.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj4step2" attributeName="opacity" from="0" to="1" dur="6.00" begin="slide1obj4step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <text x="768.00" y="564.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="24px">With
+    <animate id="slide1obj4step1" attributeName="opacity" from="0" to="0" dur="6.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj4step2" attributeName="opacity" from="0" to="1" dur="6.00" begin="slide1obj4step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="768.00" y="588.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="24px">Animation
+    <animate id="slide1obj4step1" attributeName="opacity" from="0" to="0" dur="6.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj4step2" attributeName="opacity" from="0" to="1" dur="6.00" begin="slide1obj4step1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="678.00" y="132.00" width="180.00" height="120.00" id="5" stroke="black" fill="transparent" stroke-width="4">
+    <animate id="slide1obj5step1" attributeName="opacity" from="0" to="0" dur="7.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj5step2" attributeName="opacity" from="0" to="1" dur="7.50" begin="slide1obj5step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <text x="768.00" y="180.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="24px">In SVG
+    <animate id="slide1obj5step1" attributeName="opacity" from="0" to="0" dur="7.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj5step2" attributeName="opacity" from="0" to="1" dur="7.50" begin="slide1obj5step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="768.00" y="204.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="24px">Format
+    <animate id="slide1obj5step1" attributeName="opacity" from="0" to="0" dur="7.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj5step2" attributeName="opacity" from="0" to="1" dur="7.50" begin="slide1obj5step1.end" repeatCount="1" restart="always" />
+   </text>
+   <line x1="256.00" y1="252.00" x2="256.00" y2="495.00" stroke="black" stroke-width="4" marker-end="url(#arrowhead)">
+    <animate id="slide1obj3step1" attributeName="opacity" from="0" to="0" dur="4.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj3step2" attributeName="opacity" from="0" to="1" dur="4.50" begin="slide1obj3step1.end" repeatCount="1" restart="always" />
+   </line>   <line x1="346.00" y1="576.00" x2="657.00" y2="576.00" stroke="black" stroke-width="4" marker-end="url(#arrowhead)">
+    <animate id="slide1obj4step1" attributeName="opacity" from="0" to="0" dur="6.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj4step2" attributeName="opacity" from="0" to="1" dur="6.00" begin="slide1obj4step1.end" repeatCount="1" restart="always" />
+   </line>   <line x1="768.00" y1="516.00" x2="768.00" y2="273.00" stroke="black" stroke-width="4" marker-end="url(#arrowhead)">
+    <animate id="slide1obj5step1" attributeName="opacity" from="0" to="0" dur="7.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj5step2" attributeName="opacity" from="0" to="1" dur="7.50" begin="slide1obj5step1.end" repeatCount="1" restart="always" />
+   </line>  </g>
   <marker id="arrowhead" markerWidth="5" markerHeight="3.5" refX="0" refY="1.75" orient="auto">
    <polygon points="0 0, 5 1.75 0 3.5"></polygon>
   </marker>

@@ -8,12 +8,12 @@ import (
 
 // SvgSlides
 type SvgSlides struct {
-	Config         Config  `json:"config"`
-	Slides         []Slide `json:"slides"`
-	CurrentSlideId int     `json:"currentSlideId"`
-	NextSlideId    int     `json:"nextSlideId"`
-	NextObjId      int     `json:"nextObjId"`
-	//	Animation  Animation   `json:"animation"`
+	Config         Config    `json:"config"`
+	Slides         []Slide   `json:"slides"`
+	CurrentSlideId int       `json:"currentSlideId"`
+	NextSlideId    int       `json:"nextSlideId"`
+	NextObjId      int       `json:"nextObjId"`
+	Animation      Animation `json:"animation"`
 }
 
 // SvgSlidesConfig
@@ -48,6 +48,8 @@ func New(config Config) *SvgSlides {
 	slides.NextSlideId = 1
 	slides.NextObjId = 1
 
+	slides.Animation.Enabled = false
+
 	return &slides
 }
 
@@ -55,6 +57,8 @@ func (slides *SvgSlides) AddSlide(title string) error {
 	slide := Slide{}
 	slide.Id = slides.NextSlideId
 	slide.Title = title
+	slide.TitleObjId = slides.NextObjId
+	slides.NextObjId++
 
 	slides.Slides = append(slides.Slides, slide)
 	slides.CurrentSlideId = slide.Id
@@ -99,6 +103,10 @@ func (slides *SvgSlides) AddConnector(rect1 *Shape, rect2 *Shape) error {
 }
 
 func (slides *SvgSlides) AddAnimation(autoPlay bool) error {
+
+	slides.Animation.Enabled = true
+	slides.Animation.AutoPlay = autoPlay
+
 	return nil
 }
 
@@ -117,8 +125,10 @@ func (slides *SvgSlides) render(buffer *bytes.Buffer) error {
 		fmt.Fprintf(buffer, " <use id=\"slide%d\" xlink:href=\"#slide%d-def\" x=\"0\" y=\"0\" />\n", slides.Slides[0].Id, slides.Slides[0].Id)
 	}
 
+	slides.Animation.updateSequence(slides)
+
 	for _, slide := range slides.Slides {
-		slide.render(buffer, slides.Config)
+		slide.render(buffer, slides.Config, slides.Animation)
 	}
 	fmt.Fprintf(buffer, "</svg>\n")
 

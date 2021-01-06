@@ -15,7 +15,7 @@ func TestRenderSlide(t *testing.T) {
 	slide.Title = "slide 1"
 
 	buffer := bytes.NewBuffer([]byte{})
-	err := slide.render(buffer, Config{})
+	err := slide.render(buffer, Config{}, Animation{})
 
 	if err == nil {
 		t.Log(" should render without errors", checkMark)
@@ -48,7 +48,7 @@ func TestRenderSlideWithRect(t *testing.T) {
 	}
 
 	buffer := bytes.NewBuffer([]byte{})
-	err = slide.render(buffer, Config{})
+	err = slide.render(buffer, Config{}, Animation{})
 
 	if err != nil {
 		t.Fatal(" should render without errors", xMark, err)

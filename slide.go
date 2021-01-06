@@ -10,6 +10,7 @@ import (
 type Slide struct {
 	Id         int         `json:"id"`
 	Title      string      `json:"title"`
+	TitleObjId int         `json:"titleObjId"`
 	Shapes     []Shape     `json:"shapes"`
 	Connectors []Connector `json:"connectors"`
 }
@@ -48,14 +49,16 @@ func (slide *Slide) getShape(shapeId int) (*Shape, error) {
 	return nil, errors.New("invalid shape")
 }
 
-func (slide *Slide) render(buffer *bytes.Buffer, config Config) error {
+func (slide *Slide) render(buffer *bytes.Buffer, config Config, animation Animation) error {
 
 	fmt.Fprintf(buffer, " <defs>\n")
 	fmt.Fprintf(buffer, "  <g id=\"slide%d-def\">\n", slide.Id)
-	fmt.Fprintf(buffer, "   <text x=\"50%%\" y=\"50%%\" dominant-baseline=\"middle\" text-anchor=\"middle\" fill=\"black\" font-size=\"32px\">%s</text>\n", slide.Title)
+	fmt.Fprintf(buffer, "   <text x=\"50%%\" y=\"50%%\" dominant-baseline=\"middle\" text-anchor=\"middle\" fill=\"black\" font-size=\"32px\">%s\n", slide.Title)
+	animation.render(buffer, config, slide.TitleObjId, "")
+	fmt.Fprintf(buffer, "   </text>\n")
 
 	for _, shape := range slide.Shapes {
-		shape.render(buffer, config)
+		shape.render(buffer, config, animation)
 	}
 
 	for _, connector := range slide.Connectors {
@@ -67,7 +70,7 @@ func (slide *Slide) render(buffer *bytes.Buffer, config Config) error {
 		if err != nil {
 			return err
 		}
-		connector.render(buffer, rect1, rect2)
+		connector.render(buffer, config, animation, rect1, rect2)
 	}
 
 	fmt.Fprintf(buffer, "  </g>\n")

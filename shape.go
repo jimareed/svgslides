@@ -75,10 +75,12 @@ func shapeToSvg(shape Shape, transitionId int) string {
 	return svg
 }
 
-func (shape *Shape) render(buffer *bytes.Buffer, config Config) error {
+func (shape *Shape) render(buffer *bytes.Buffer, config Config, animation Animation) error {
 
-	fmt.Fprintf(buffer, "   <rect x=\"%.2f\" y=\"%.2f\" width=\"%.2f\" height=\"%.2f\" id=\"%d\" stroke=\"black\" fill=\"transparent\" stroke-width=\"4\" />\n",
+	fmt.Fprintf(buffer, "   <rect x=\"%.2f\" y=\"%.2f\" width=\"%.2f\" height=\"%.2f\" id=\"%d\" stroke=\"black\" fill=\"transparent\" stroke-width=\"4\">\n",
 		shape.X, shape.Y, config.RectWidth, config.RectHeight, shape.Id)
+	animation.render(buffer, config, shape.Id, "")
+	fmt.Fprintf(buffer, "   </rect>\n")
 
 	if shape.Label != "" {
 		x := shape.X + shape.Width/2
@@ -88,7 +90,7 @@ func (shape *Shape) render(buffer *bytes.Buffer, config Config) error {
 			labelSize = config.LabelSize
 		}
 		label := Label{x, y, shape.Label, labelSize}
-		label.render(buffer, config)
+		label.render(buffer, config, animation, shape.Id)
 	}
 
 	return nil

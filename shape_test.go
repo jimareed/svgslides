@@ -16,7 +16,7 @@ func TestRenderShape(t *testing.T) {
 	shape.Label = "Shape 1"
 
 	buffer := bytes.NewBuffer([]byte{})
-	err := shape.render(buffer, Config{})
+	err := shape.render(buffer, Config{}, Animation{})
 
 	if err == nil {
 		t.Log(" should render without errors", checkMark)

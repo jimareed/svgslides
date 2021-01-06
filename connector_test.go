@@ -30,7 +30,7 @@ func TestRenderConnector(t *testing.T) {
 	connector := Connector{1, rect1.Id, rect2.Id}
 
 	buffer := bytes.NewBuffer([]byte{})
-	err := connector.render(buffer, rect1, rect2)
+	err := connector.render(buffer, Config{}, Animation{}, rect1, rect2)
 
 	if err == nil {
 		t.Log(" should render without errors", checkMark)

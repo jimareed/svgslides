@@ -133,14 +133,15 @@ func (connector *Connector) getP2(shape1 *Shape, shape2 *Shape) Point {
 	return p
 }
 
-func (connector *Connector) render(buffer *bytes.Buffer, shape1 *Shape, shape2 *Shape) error {
+func (connector *Connector) render(buffer *bytes.Buffer, config Config, animation Animation, shape1 *Shape, shape2 *Shape) error {
 
 	p1 := connector.getP1(shape1, shape2)
 	p2 := connector.getP2(shape1, shape2)
 
-	fmt.Fprintf(buffer, "   <line x1=\"%.2f\" y1=\"%.2f\" x2=\"%.2f\" y2=\"%.2f\" stroke=\"black\" stroke-width=\"4\" marker-end=\"url(#arrowhead)\"	/>\n",
+	fmt.Fprintf(buffer, "   <line x1=\"%.2f\" y1=\"%.2f\" x2=\"%.2f\" y2=\"%.2f\" stroke=\"black\" stroke-width=\"4\" marker-end=\"url(#arrowhead)\">\n",
 		p1.x, p1.y, p2.x, p2.y)
-
+	animation.render(buffer, config, shape2.Id, "")
+	fmt.Fprintf(buffer, "   </line>")
 	return nil
 }
 
