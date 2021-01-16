@@ -8,7 +8,7 @@
     <animate id="slide1beginstep1" attributeName="opacity" from="0" to="0" dur="1.50" begin="0s" repeatCount="1" restart="always" />
     <animate id="slide1beginstep2" attributeName="opacity" from="0" to="1" dur="1.50" begin="slide1beginstep1.end" repeatCount="1" restart="always" />
    </text>
-   <text x="768.00" y="576.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="24px">This is slide 1
+   <text x="678.00" y="516.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="24px">This is slide 1
     <animate id="slide1obj2step1" attributeName="opacity" from="0" to="0" dur="3.00" begin="0s" repeatCount="1" restart="always" />
     <animate id="slide1obj2step2" attributeName="opacity" from="0" to="1" dur="3.00" begin="slide1obj2step1.end" repeatCount="1" restart="always" />
    </text>
@@ -23,7 +23,7 @@
     <animate id="slide2beginstep1" attributeName="opacity" from="0" to="0" dur="1.50" begin="0s" repeatCount="1" restart="always" />
     <animate id="slide2beginstep2" attributeName="opacity" from="0" to="1" dur="1.50" begin="slide2beginstep1.end" repeatCount="1" restart="always" />
    </text>
-   <text x="768.00" y="576.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="24px">Followed by slide 2
+   <text x="678.00" y="516.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="24px">Followed by slide 2
     <animate id="slide2obj4step1" attributeName="opacity" from="0" to="0" dur="3.00" begin="0s" repeatCount="1" restart="always" />
     <animate id="slide2obj4step2" attributeName="opacity" from="0" to="1" dur="3.00" begin="slide2obj4step1.end" repeatCount="1" restart="always" />
    </text>
@@ -38,7 +38,7 @@
     <animate id="slide3beginstep1" attributeName="opacity" from="0" to="0" dur="1.50" begin="0s" repeatCount="1" restart="always" />
     <animate id="slide3beginstep2" attributeName="opacity" from="0" to="1" dur="1.50" begin="slide3beginstep1.end" repeatCount="1" restart="always" />
    </text>
-   <text x="768.00" y="576.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="24px">Last slide
+   <text x="678.00" y="516.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="24px">Last slide
     <animate id="slide3obj6step1" attributeName="opacity" from="0" to="0" dur="3.00" begin="0s" repeatCount="1" restart="always" />
     <animate id="slide3obj6step2" attributeName="opacity" from="0" to="1" dur="3.00" begin="slide3obj6step1.end" repeatCount="1" restart="always" />
    </text>

@@ -42,6 +42,17 @@ func (slide *Slide) addText(id int, label string, x float64, y float64, config C
 	shape.Height = config.RectHeight
 	shape.Type = "text"
 
+	shape.X = shape.X - shape.Width/2
+	shape.Y = shape.Y - shape.Height/2
+
+	if shape.X < 0 {
+		shape.X = 0
+	}
+
+	if shape.Y < 0 {
+		shape.Y = 0
+	}
+
 	slide.Shapes = append(slide.Shapes, shape)
 
 	return &shape, nil
@@ -70,7 +81,7 @@ func (slide *Slide) render(buffer *bytes.Buffer, config Config, animation Animat
 
 	fmt.Fprintf(buffer, " <defs>\n")
 	fmt.Fprintf(buffer, "  <g id=\"slide%d-def\">\n", slide.Id)
-	fmt.Fprintf(buffer, "   <text x=\"50%%\" y=\"50%%\" dominant-baseline=\"middle\" text-anchor=\"middle\" fill=\"black\" font-size=\"32px\">%s\n", slide.Title)
+	fmt.Fprintf(buffer, "   <text x=\"50%%\" y=\"50%%\" dominant-baseline=\"middle\" text-anchor=\"middle\" fill=\"black\" font-size=\"32px\">%s\n", encodeLabel(slide.Title))
 	animation.render(buffer, config, slide.TitleObjId, "")
 	fmt.Fprintf(buffer, "   </text>\n")
 

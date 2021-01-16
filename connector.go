@@ -141,7 +141,7 @@ func (connector *Connector) render(buffer *bytes.Buffer, config Config, animatio
 	fmt.Fprintf(buffer, "   <line x1=\"%.2f\" y1=\"%.2f\" x2=\"%.2f\" y2=\"%.2f\" stroke=\"black\" stroke-width=\"4\" marker-end=\"url(#arrowhead)\">\n",
 		p1.x, p1.y, p2.x, p2.y)
 	animation.render(buffer, config, shape2.Id, "")
-	fmt.Fprintf(buffer, "   </line>")
+	fmt.Fprintf(buffer, "   </line>\n")
 	return nil
 }
 
