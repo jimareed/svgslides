@@ -1,4 +1,4 @@
-module github.com/jimareed/svgslides
+module github.com/jimareed/svgslides-go
 
 go 1.15
 

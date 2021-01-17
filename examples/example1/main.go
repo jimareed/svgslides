@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/jimareed/svgslides"
+	"github.com/jimareed/svgslides-go"
 )
 
 func main() {
