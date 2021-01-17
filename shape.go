@@ -79,8 +79,12 @@ func (shape *Shape) render(buffer *bytes.Buffer, config Config, animation Animat
 
 	switch shape.Type {
 	case "rect":
-		fmt.Fprintf(buffer, "   <rect x=\"%.2f\" y=\"%.2f\" width=\"%.2f\" height=\"%.2f\" id=\"%d\" stroke=\"black\" fill=\"transparent\" stroke-width=\"4\">\n",
-			shape.X, shape.Y, config.RectWidth, config.RectHeight, shape.Id)
+		strokeWidth := 4
+		if shape.Style == "hidden" {
+			strokeWidth = 0
+		}
+		fmt.Fprintf(buffer, "   <rect x=\"%.2f\" y=\"%.2f\" width=\"%.2f\" height=\"%.2f\" id=\"%d\" stroke=\"black\" fill=\"transparent\" stroke-width=\"%d\">\n",
+			shape.X, shape.Y, config.RectWidth, config.RectHeight, shape.Id, strokeWidth)
 		animation.render(buffer, config, shape.Id, "")
 		fmt.Fprintf(buffer, "   </rect>\n")
 	case "text":

@@ -2,7 +2,6 @@ package svgslides
 
 import (
 	"bytes"
-	"fmt"
 	"testing"
 )
 
@@ -42,6 +41,4 @@ func TestRenderAnimation(t *testing.T) {
 	} else {
 		t.Fatal(" should have a length greater than 0", xMark)
 	}
-
-	fmt.Printf(string(buffer.Bytes()))
 }
