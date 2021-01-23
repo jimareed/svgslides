@@ -39,7 +39,7 @@ func TestRenderSlideWithRect(t *testing.T) {
 	slide.Id = 1
 	slide.Title = "slide 1"
 
-	_, err := slide.addRect(1, "rect label", 50, 50, Config{})
+	_, err := slide.addRect(1, "rect label", 50, 50, 180, 120, Config{})
 
 	if err == nil {
 		t.Log(" should add a rect without errors", checkMark)

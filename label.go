@@ -12,6 +12,7 @@ type Label struct {
 	Y     float64 `json:"y"`
 	Value string  `json:"value"`
 	Size  int     `json:"size"`
+	Style string  `json:"style"`
 }
 
 func encodeLabel(s string) string {
@@ -30,6 +31,14 @@ func (label *Label) render(buffer *bytes.Buffer, config Config, animation Animat
 		return nil
 	}
 
+	dominantBaseline := "middle"
+	textAnchor := "middle"
+
+	if label.Style == "left" {
+		dominantBaseline = "auto"
+		textAnchor = "start"
+	}
+
 	items := strings.Split(label.Value, "\n")
 
 	offset := (len(items) - 1) * (label.Size / 2)
@@ -37,8 +46,8 @@ func (label *Label) render(buffer *bytes.Buffer, config Config, animation Animat
 	for i, item := range items {
 		text := encodeLabel(item)
 		y := label.Y - float64(offset) + float64(i*label.Size)
-		fmt.Fprintf(buffer, "   <text x=\"%.2f\" y=\"%.2f\" fill=\"black\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-size=\"%dpx\">%s\n",
-			label.X, y, label.Size, text)
+		fmt.Fprintf(buffer, "   <text x=\"%.2f\" y=\"%.2f\" fill=\"black\" dominant-baseline=\"%s\" text-anchor=\"%s\" font-size=\"%dpx\">%s\n",
+			label.X, y, dominantBaseline, textAnchor, label.Size, text)
 		animation.render(buffer, config, objId, "label")
 		fmt.Fprintf(buffer, "   </text>\n")
 	}

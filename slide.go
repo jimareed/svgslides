@@ -15,16 +15,50 @@ type Slide struct {
 	Connectors []Connector `json:"connectors"`
 }
 
-func (slide *Slide) addRect(id int, label string, x float64, y float64, config Config) (*Shape, error) {
+func (slide *Slide) addRect(id int, label string, x float64, y float64, width float64, height float64, config Config) (*Shape, error) {
 
 	shape := Shape{}
 	shape.Id = id
 	shape.Label = label
 	shape.X = x
 	shape.Y = y
+	shape.Width = width
+	shape.Height = height
+	shape.Type = "rect"
+
+	slide.Shapes = append(slide.Shapes, shape)
+
+	return &shape, nil
+}
+
+func (slide *Slide) addCircle(id int, label string, x float64, y float64, diameter float64, config Config) (*Shape, error) {
+
+	shape := Shape{}
+	shape.Id = id
+	shape.Label = label
+	shape.X = x
+	shape.Y = y
+	shape.Width = diameter
+	shape.Height = diameter
+	shape.Type = "circle"
+
+	slide.Shapes = append(slide.Shapes, shape)
+
+	return &shape, nil
+}
+
+func (slide *Slide) addLine(id int, label string, x1 float64, y1 float64, x2 float64, y2 float64, config Config) (*Shape, error) {
+
+	shape := Shape{}
+	shape.Id = id
+	shape.Label = label
+	shape.X = x1
+	shape.Y = y1
 	shape.Width = config.RectWidth
 	shape.Height = config.RectHeight
-	shape.Type = "rect"
+	shape.Type = "line"
+	shape.X2 = x2
+	shape.Y2 = y2
 
 	slide.Shapes = append(slide.Shapes, shape)
 

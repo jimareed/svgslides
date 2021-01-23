@@ -51,7 +51,7 @@ func TestAddRect(t *testing.T) {
 		t.Fatal(" should be able to create a new slide", xMark, err)
 	}
 
-	_, err = slides.AddRect("rect label", 50, 50)
+	_, err = slides.AddRect("rect label", 50, 50, 180, 120)
 
 	if err == nil {
 		t.Log(" should be able to add a rect without errors", checkMark)

@@ -9,7 +9,7 @@ func TestRenderLabel(t *testing.T) {
 
 	t.Log("a label")
 
-	label := Label{100, 100, "label", 20}
+	label := Label{100, 100, "label", 20, ""}
 
 	buffer := bytes.NewBuffer([]byte{})
 	err := label.render(buffer, Config{}, Animation{}, 1)

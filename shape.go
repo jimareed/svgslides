@@ -87,18 +87,36 @@ func (shape *Shape) render(buffer *bytes.Buffer, config Config, animation Animat
 			shape.X, shape.Y, config.RectWidth, config.RectHeight, shape.Id, strokeWidth)
 		animation.render(buffer, config, shape.Id, "")
 		fmt.Fprintf(buffer, "   </rect>\n")
+	case "circle":
+		fmt.Fprintf(buffer,
+			"   <circle cx=\"%f\" cy=\"%f\" r=\"%f\" id=\"%d\" stroke=\"black\" fill=\"transparent\" stroke-width=\"4\" >\n",
+			shape.X, shape.Y, shape.Width/2, shape.Id)
+		animation.render(buffer, config, shape.Id, "")
+		fmt.Fprintf(buffer, "   </circle>\n")
+	case "line":
+		fmt.Fprintf(buffer,
+			"   <line x1=\"%f\" y1=\"%f\" x2=\"%f\" y2=\"%f\" id=\"%d\" stroke=\"black\" stroke-width=\"4\" >\n",
+			shape.X, shape.Y, shape.X2, shape.Y2, shape.Id)
+		animation.render(buffer, config, shape.Id, "")
+		fmt.Fprintf(buffer, "   </line>\n")
 	case "text":
 	default:
 	}
 
 	if shape.Label != "" {
-		x := shape.X + shape.Width/2
+		x := shape.X + shape.Width/2 // center text by default
 		y := shape.Y + shape.Height/2
+		style := ""
+		if shape.Style == "left" { // align left
+			x = shape.X
+			y = shape.Y
+			style = "left"
+		}
 		labelSize := shape.LabelSize
 		if labelSize == 0 {
 			labelSize = config.LabelSize
 		}
-		label := Label{x, y, shape.Label, labelSize}
+		label := Label{x, y, shape.Label, labelSize, style}
 		label.render(buffer, config, animation, shape.Id)
 	}
 

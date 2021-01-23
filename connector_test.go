@@ -15,8 +15,8 @@ func initRects(p1 Point, p2 Point) (*Shape, *Shape) {
 	slides := New(Config{200, 200, 20, 20, 12})
 
 	slides.AddSlide("")
-	rect1, _ := slides.AddRect("", p1.x, p1.y)
-	rect2, _ := slides.AddRect("", p2.x, p2.y)
+	rect1, _ := slides.AddRect("", p1.x, p1.y, 20, 20)
+	rect2, _ := slides.AddRect("", p2.x, p2.y, 20, 20)
 
 	return rect1, rect2
 }
@@ -233,8 +233,8 @@ func TestExample1Connector(t *testing.T) {
 	slides := New(Config{1024, 768, 180, 120, 24})
 
 	slides.AddSlide("")
-	rect1, _ := slides.AddRect("", 166, 132)
-	rect2, _ := slides.AddRect("", 166, 516)
+	rect1, _ := slides.AddRect("", 166, 132, 180, 120)
+	rect2, _ := slides.AddRect("", 166, 516, 180, 120)
 
 	connector := Connector{1, rect1.Id, rect2.Id}
 

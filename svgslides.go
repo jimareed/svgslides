@@ -2,8 +2,10 @@ package svgslides
 
 import (
 	"bytes"
+	"encoding/json"
 	"errors"
 	"fmt"
+	"strings"
 )
 
 // SvgSlides
@@ -66,6 +68,24 @@ func (slides *SvgSlides) AddSlide(title string) error {
 	return nil
 }
 
+func (slides *SvgSlides) FromString(input string) error {
+
+	r := strings.NewReader(input)
+	err := json.NewDecoder(r).Decode(slides)
+
+	return err
+}
+
+func (slides *SvgSlides) ToString() (string, error) {
+
+	b, err := json.Marshal(slides)
+	if err != nil {
+		return "", err
+	}
+
+	return string(b), nil
+}
+
 func (slides *SvgSlides) getSlide(slideId int) (*Slide, error) {
 
 	for i := 0; i < len(slides.Slides); i++ {
@@ -76,14 +96,40 @@ func (slides *SvgSlides) getSlide(slideId int) (*Slide, error) {
 	return nil, errors.New("invalid slide")
 }
 
-func (slides *SvgSlides) AddRect(label string, x float64, y float64) (*Shape, error) {
+func (slides *SvgSlides) AddRect(label string, x float64, y float64, width float64, height float64) (*Shape, error) {
 
 	slide, err := slides.getSlide(slides.CurrentSlideId)
 	if err != nil {
 		return nil, err
 	}
 
-	shape, err := slide.addRect(slides.NextObjId, label, x, y, slides.Config)
+	shape, err := slide.addRect(slides.NextObjId, label, x, y, width, height, slides.Config)
+	slides.NextObjId++
+
+	return shape, err
+}
+
+func (slides *SvgSlides) AddCircle(label string, x float64, y float64, diameter float64) (*Shape, error) {
+
+	slide, err := slides.getSlide(slides.CurrentSlideId)
+	if err != nil {
+		return nil, err
+	}
+
+	shape, err := slide.addCircle(slides.NextObjId, label, x, y, diameter, slides.Config)
+	slides.NextObjId++
+
+	return shape, err
+}
+
+func (slides *SvgSlides) AddLine(label string, x1 float64, y1 float64, x2 float64, y2 float64) (*Shape, error) {
+
+	slide, err := slides.getSlide(slides.CurrentSlideId)
+	if err != nil {
+		return nil, err
+	}
+
+	shape, err := slide.addLine(slides.NextObjId, label, x1, y1, x2, y2, slides.Config)
 	slides.NextObjId++
 
 	return shape, err
