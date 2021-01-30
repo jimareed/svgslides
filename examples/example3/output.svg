@@ -1,0 +1,614 @@
+<svg id="canvas" width="1024.00" height="768.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+ <use id="slide1" xlink:href="#slide1-def" x="0" y="0" />
+ <polygon class="nextslide-transition" points="990 740, 975 753 990 766"    stroke="lightgrey" fill="lightgrey" onmousedown="previousSlide(evt)" onmouseover="evt.target.setAttribute('fill', 'black');" onmouseout="evt.target.setAttribute('fill','lightgrey');"></polygon>
+ <polygon class="nextslide-transition" points="1000 740, 1015 753 1000 766" stroke="lightgrey" fill="lightgrey" onmousedown="nextSlide(evt)"     onmouseover="evt.target.setAttribute('fill', 'black');" onmouseout="evt.target.setAttribute('fill','lightgrey');"></polygon>
+ <defs>
+  <g id="slide1-def">
+   <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="black" font-size="32px">
+    <animate id="slide1beginstep1" attributeName="opacity" from="0" to="0" dur="0.10" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1beginstep2" attributeName="opacity" from="0" to="1" dur="0.10" begin="slide1beginstep1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="330.00" y="355.00" width="360.00" height="60.00" id="2" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide1obj2step1" attributeName="opacity" from="0" to="0" dur="3.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj2step2" attributeName="opacity" from="0" to="1" dur="3.00" begin="slide1obj2step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <text x="510.00" y="385.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="36px">Emotional Intelligence
+    <animate id="slide1obj2step1" attributeName="opacity" from="0" to="0" dur="3.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj2step2" attributeName="opacity" from="0" to="1" dur="3.00" begin="slide1obj2step1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="120.00" y="245.00" width="360.00" height="60.00" id="3" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide1obj3step1" attributeName="opacity" from="0" to="0" dur="4.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj3step2" attributeName="opacity" from="0" to="1" dur="4.50" begin="slide1obj3step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <text x="300.00" y="275.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="20px">Self Awareness
+    <animate id="slide1obj3step1" attributeName="opacity" from="0" to="0" dur="4.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj3step2" attributeName="opacity" from="0" to="1" dur="4.50" begin="slide1obj3step1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="140.00" y="165.00" width="360.00" height="60.00" id="4" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide1obj4step1" attributeName="opacity" from="0" to="0" dur="6.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj4step2" attributeName="opacity" from="0" to="1" dur="6.00" begin="slide1obj4step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <text x="320.00" y="195.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="20px">Self Assessment
+    <animate id="slide1obj4step1" attributeName="opacity" from="0" to="0" dur="6.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj4step2" attributeName="opacity" from="0" to="1" dur="6.00" begin="slide1obj4step1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="250.00" y="135.00" width="360.00" height="60.00" id="5" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide1obj5step1" attributeName="opacity" from="0" to="0" dur="7.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj5step2" attributeName="opacity" from="0" to="1" dur="7.50" begin="slide1obj5step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <text x="430.00" y="165.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="20px">Self Confidence
+    <animate id="slide1obj5step1" attributeName="opacity" from="0" to="0" dur="7.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj5step2" attributeName="opacity" from="0" to="1" dur="7.50" begin="slide1obj5step1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="450.00" y="125.00" width="360.00" height="60.00" id="6" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide1obj6step1" attributeName="opacity" from="0" to="0" dur="9.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj6step2" attributeName="opacity" from="0" to="1" dur="9.00" begin="slide1obj6step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <text x="630.00" y="155.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="20px">Empathy
+    <animate id="slide1obj6step1" attributeName="opacity" from="0" to="0" dur="9.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj6step2" attributeName="opacity" from="0" to="1" dur="9.00" begin="slide1obj6step1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="550.00" y="185.00" width="360.00" height="60.00" id="7" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide1obj7step1" attributeName="opacity" from="0" to="0" dur="10.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj7step2" attributeName="opacity" from="0" to="1" dur="10.50" begin="slide1obj7step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <text x="730.00" y="215.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="20px">Organizational Awareness
+    <animate id="slide1obj7step1" attributeName="opacity" from="0" to="0" dur="10.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj7step2" attributeName="opacity" from="0" to="1" dur="10.50" begin="slide1obj7step1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="131.00" y="440.00" width="360.00" height="60.00" id="8" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide1obj8step1" attributeName="opacity" from="0" to="0" dur="12.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj8step2" attributeName="opacity" from="0" to="1" dur="12.00" begin="slide1obj8step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <text x="311.00" y="470.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="20px">Self Control
+    <animate id="slide1obj8step1" attributeName="opacity" from="0" to="0" dur="12.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj8step2" attributeName="opacity" from="0" to="1" dur="12.00" begin="slide1obj8step1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="132.00" y="515.00" width="360.00" height="60.00" id="9" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide1obj9step1" attributeName="opacity" from="0" to="0" dur="13.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj9step2" attributeName="opacity" from="0" to="1" dur="13.50" begin="slide1obj9step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <text x="312.00" y="545.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="20px">Trustworthiness
+    <animate id="slide1obj9step1" attributeName="opacity" from="0" to="0" dur="13.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj9step2" attributeName="opacity" from="0" to="1" dur="13.50" begin="slide1obj9step1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="131.00" y="620.00" width="360.00" height="60.00" id="10" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide1obj10step1" attributeName="opacity" from="0" to="0" dur="15.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj10step2" attributeName="opacity" from="0" to="1" dur="15.00" begin="slide1obj10step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <text x="311.00" y="650.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="20px">Motivaction
+    <animate id="slide1obj10step1" attributeName="opacity" from="0" to="0" dur="15.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj10step2" attributeName="opacity" from="0" to="1" dur="15.00" begin="slide1obj10step1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="228.00" y="585.00" width="360.00" height="60.00" id="11" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide1obj11step1" attributeName="opacity" from="0" to="0" dur="16.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj11step2" attributeName="opacity" from="0" to="1" dur="16.50" begin="slide1obj11step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <text x="408.00" y="615.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="20px">Disipline
+    <animate id="slide1obj11step1" attributeName="opacity" from="0" to="0" dur="16.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj11step2" attributeName="opacity" from="0" to="1" dur="16.50" begin="slide1obj11step1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="270.00" y="656.00" width="360.00" height="60.00" id="12" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide1obj12step1" attributeName="opacity" from="0" to="0" dur="18.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj12step2" attributeName="opacity" from="0" to="1" dur="18.00" begin="slide1obj12step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <text x="450.00" y="686.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="20px">Optimism
+    <animate id="slide1obj12step1" attributeName="opacity" from="0" to="0" dur="18.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj12step2" attributeName="opacity" from="0" to="1" dur="18.00" begin="slide1obj12step1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="610.00" y="445.00" width="360.00" height="60.00" id="13" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide1obj13step1" attributeName="opacity" from="0" to="0" dur="19.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj13step2" attributeName="opacity" from="0" to="1" dur="19.50" begin="slide1obj13step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <text x="790.00" y="475.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="20px">Influence
+    <animate id="slide1obj13step1" attributeName="opacity" from="0" to="0" dur="19.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj13step2" attributeName="opacity" from="0" to="1" dur="19.50" begin="slide1obj13step1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="580.00" y="515.00" width="360.00" height="60.00" id="14" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide1obj14step1" attributeName="opacity" from="0" to="0" dur="21.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj14step2" attributeName="opacity" from="0" to="1" dur="21.00" begin="slide1obj14step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <text x="760.00" y="545.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="20px">Conflict Management
+    <animate id="slide1obj14step1" attributeName="opacity" from="0" to="0" dur="21.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj14step2" attributeName="opacity" from="0" to="1" dur="21.00" begin="slide1obj14step1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="540.00" y="575.00" width="360.00" height="60.00" id="15" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide1obj15step1" attributeName="opacity" from="0" to="0" dur="22.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj15step2" attributeName="opacity" from="0" to="1" dur="22.50" begin="slide1obj15step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <text x="720.00" y="605.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="20px">Relationships
+    <animate id="slide1obj15step1" attributeName="opacity" from="0" to="0" dur="22.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj15step2" attributeName="opacity" from="0" to="1" dur="22.50" begin="slide1obj15step1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="485.00" y="625.00" width="360.00" height="60.00" id="16" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide1obj16step1" attributeName="opacity" from="0" to="0" dur="24.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj16step2" attributeName="opacity" from="0" to="1" dur="24.00" begin="slide1obj16step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <text x="665.00" y="655.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="20px">Teamwork &amp; Collaboration
+    <animate id="slide1obj16step1" attributeName="opacity" from="0" to="0" dur="24.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj16step2" attributeName="opacity" from="0" to="1" dur="24.00" begin="slide1obj16step1.end" repeatCount="1" restart="always" />
+   </text>
+   <line x1="452.73" y1="355.00" x2="375.88" y2="314.74" stroke="black" stroke-width="4" marker-end="url(#arrowhead)">
+    <animate id="slide1obj3step1" attributeName="opacity" from="0" to="0" dur="4.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj3step2" attributeName="opacity" from="0" to="1" dur="4.50" begin="slide1obj3step1.end" repeatCount="1" restart="always" />
+   </line>
+   <line x1="480.00" y1="355.00" x2="364.85" y2="239.85" stroke="black" stroke-width="4" marker-end="url(#arrowhead)">
+    <animate id="slide1obj4step1" attributeName="opacity" from="0" to="0" dur="6.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj4step2" attributeName="opacity" from="0" to="1" dur="6.00" begin="slide1obj4step1.end" repeatCount="1" restart="always" />
+   </line>
+   <line x1="499.09" y1="355.00" x2="448.09" y2="214.74" stroke="black" stroke-width="4" marker-end="url(#arrowhead)">
+    <animate id="slide1obj5step1" attributeName="opacity" from="0" to="0" dur="7.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj5step2" attributeName="opacity" from="0" to="1" dur="7.50" begin="slide1obj5step1.end" repeatCount="1" restart="always" />
+   </line>
+   <line x1="525.65" y1="355.00" x2="604.63" y2="203.62" stroke="black" stroke-width="4" marker-end="url(#arrowhead)">
+    <animate id="slide1obj6step1" attributeName="opacity" from="0" to="0" dur="9.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj6step2" attributeName="opacity" from="0" to="1" dur="9.00" begin="slide1obj6step1.end" repeatCount="1" restart="always" />
+   </line>
+   <line x1="548.82" y1="355.00" x2="674.56" y2="257.84" stroke="black" stroke-width="4" marker-end="url(#arrowhead)">
+    <animate id="slide1obj7step1" attributeName="opacity" from="0" to="0" dur="10.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj7step2" attributeName="opacity" from="0" to="1" dur="10.50" begin="slide1obj7step1.end" repeatCount="1" restart="always" />
+   </line>
+   <line x1="439.76" y1="415.00" x2="400.55" y2="431.75" stroke="black" stroke-width="4" marker-end="url(#arrowhead)">
+    <animate id="slide1obj8step1" attributeName="opacity" from="0" to="0" dur="12.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj8step2" attributeName="opacity" from="0" to="1" dur="12.00" begin="slide1obj8step1.end" repeatCount="1" restart="always" />
+   </line>
+   <line x1="472.88" y1="415.00" x2="365.46" y2="501.80" stroke="black" stroke-width="4" marker-end="url(#arrowhead)">
+    <animate id="slide1obj9step1" attributeName="opacity" from="0" to="0" dur="13.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj9step2" attributeName="opacity" from="0" to="1" dur="13.50" begin="slide1obj9step1.end" repeatCount="1" restart="always" />
+   </line>
+   <line x1="487.47" y1="415.00" x2="346.14" y2="603.21" stroke="black" stroke-width="4" marker-end="url(#arrowhead)">
+    <animate id="slide1obj10step1" attributeName="opacity" from="0" to="0" dur="15.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj10step2" attributeName="opacity" from="0" to="1" dur="15.00" begin="slide1obj10step1.end" repeatCount="1" restart="always" />
+   </line>
+   <line x1="496.70" y1="415.00" x2="429.82" y2="565.80" stroke="black" stroke-width="4" marker-end="url(#arrowhead)">
+    <animate id="slide1obj11step1" attributeName="opacity" from="0" to="0" dur="16.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj11step2" attributeName="opacity" from="0" to="1" dur="16.50" begin="slide1obj11step1.end" repeatCount="1" restart="always" />
+   </line>
+   <line x1="504.02" y1="415.00" x2="460.09" y2="635.41" stroke="black" stroke-width="4" marker-end="url(#arrowhead)">
+    <animate id="slide1obj12step1" attributeName="opacity" from="0" to="0" dur="18.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj12step2" attributeName="opacity" from="0" to="1" dur="18.00" begin="slide1obj12step1.end" repeatCount="1" restart="always" />
+   </line>
+   <line x1="603.33" y1="415.00" x2="676.67" y2="438.57" stroke="black" stroke-width="4" marker-end="url(#arrowhead)">
+    <animate id="slide1obj13step1" attributeName="opacity" from="0" to="0" dur="19.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj13step2" attributeName="opacity" from="0" to="1" dur="19.50" begin="slide1obj13step1.end" repeatCount="1" restart="always" />
+   </line>
+   <line x1="556.88" y1="415.00" x2="695.44" y2="503.68" stroke="black" stroke-width="4" marker-end="url(#arrowhead)">
+    <animate id="slide1obj14step1" attributeName="opacity" from="0" to="0" dur="21.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj14step2" attributeName="opacity" from="0" to="1" dur="21.00" begin="slide1obj14step1.end" repeatCount="1" restart="always" />
+   </line>
+   <line x1="538.64" y1="415.00" x2="676.86" y2="559.81" stroke="black" stroke-width="4" marker-end="url(#arrowhead)">
+    <animate id="slide1obj15step1" attributeName="opacity" from="0" to="0" dur="22.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj15step2" attributeName="opacity" from="0" to="1" dur="22.50" begin="slide1obj15step1.end" repeatCount="1" restart="always" />
+   </line>
+   <line x1="527.22" y1="415.00" x2="637.32" y2="606.79" stroke="black" stroke-width="4" marker-end="url(#arrowhead)">
+    <animate id="slide1obj16step1" attributeName="opacity" from="0" to="0" dur="24.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1obj16step2" attributeName="opacity" from="0" to="1" dur="24.00" begin="slide1obj16step1.end" repeatCount="1" restart="always" />
+   </line>
+  </g>
+  <marker id="arrowhead" markerWidth="5" markerHeight="3.5" refX="0" refY="1.75" orient="auto">
+   <polygon points="0 0, 5 1.75 0 3.5"></polygon>
+  </marker>
+ </defs>
+ <defs>
+  <g id="slide2-def">
+   <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="black" font-size="32px">
+    <animate id="slide2beginstep1" attributeName="opacity" from="0" to="0" dur="0.10" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide2beginstep2" attributeName="opacity" from="0" to="1" dur="0.10" begin="slide2beginstep1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="210.00" y="260.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="24px">Engineering is easy.
+    <animate id="slide2obj48step1" attributeName="opacity" from="0" to="0" dur="3.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide2obj48step2" attributeName="opacity" from="0" to="1" dur="3.00" begin="slide2obj48step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="410.00" y="260.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="24px">People are hard.
+    <animate id="slide2obj49step1" attributeName="opacity" from="0" to="0" dur="4.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide2obj49step2" attributeName="opacity" from="0" to="1" dur="4.50" begin="slide2obj49step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="210.00" y="300.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="12px">- Bill Coughran (former SVP Google)
+    <animate id="slide2obj50step1" attributeName="opacity" from="0" to="0" dur="6.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide2obj50step2" attributeName="opacity" from="0" to="1" dur="6.00" begin="slide2obj50step1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="575.00" y="390.00" width="40.00" height="40.00" id="54" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide2obj54step1" attributeName="opacity" from="0" to="0" dur="7.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide2obj54step2" attributeName="opacity" from="0" to="1" dur="7.50" begin="slide2obj54step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <text x="595.00" y="410.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="20px">Emotional Intelligence helps with the hard stuff
+    <animate id="slide2obj54step1" attributeName="opacity" from="0" to="0" dur="7.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide2obj54step2" attributeName="opacity" from="0" to="1" dur="7.50" begin="slide2obj54step1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="460.00" y="260.00" width="360.00" height="60.00" id="51" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide2obj51step1" attributeName="opacity" from="0" to="0" dur="9.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide2obj51step2" attributeName="opacity" from="0" to="1" dur="9.00" begin="slide2obj51step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <rect x="410.00" y="260.00" width="360.00" height="60.00" id="52" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide2obj52step1" attributeName="opacity" from="0" to="0" dur="10.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide2obj52step2" attributeName="opacity" from="0" to="1" dur="10.50" begin="slide2obj52step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <rect x="410.00" y="260.00" width="360.00" height="60.00" id="53" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide2obj53step1" attributeName="opacity" from="0" to="0" dur="12.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide2obj53step2" attributeName="opacity" from="0" to="1" dur="12.00" begin="slide2obj53step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <line x1="577.31" y1="390.00" x2="511.61" y2="315.73" stroke="black" stroke-width="4" marker-end="url(#arrowhead)">
+    <animate id="slide2obj51step1" attributeName="opacity" from="0" to="0" dur="9.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide2obj51step2" attributeName="opacity" from="0" to="1" dur="9.00" begin="slide2obj51step1.end" repeatCount="1" restart="always" />
+   </line>
+  </g>
+  <marker id="arrowhead" markerWidth="5" markerHeight="3.5" refX="0" refY="1.75" orient="auto">
+   <polygon points="0 0, 5 1.75 0 3.5"></polygon>
+  </marker>
+ </defs>
+ <defs>
+  <g id="slide3-def">
+   <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="black" font-size="32px">
+    <animate id="slide3beginstep1" attributeName="opacity" from="0" to="0" dur="0.10" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3beginstep2" attributeName="opacity" from="0" to="1" dur="0.10" begin="slide3beginstep1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="590.00" y="325.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Effort that goes
+    <animate id="slide3obj67step1" attributeName="opacity" from="0" to="0" dur="3.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj67step2" attributeName="opacity" from="0" to="1" dur="3.00" begin="slide3obj67step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="590.00" y="355.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">toward work
+    <animate id="slide3obj68step1" attributeName="opacity" from="0" to="0" dur="4.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj68step2" attributeName="opacity" from="0" to="1" dur="4.50" begin="slide3obj68step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="205.00" y="180.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Effort that goes toward
+    <animate id="slide3obj65step1" attributeName="opacity" from="0" to="0" dur="6.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj65step2" attributeName="opacity" from="0" to="1" dur="6.00" begin="slide3obj65step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="205.00" y="210.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">emotional survival
+    <animate id="slide3obj66step1" attributeName="opacity" from="0" to="0" dur="7.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj66step2" attributeName="opacity" from="0" to="1" dur="7.50" begin="slide3obj66step1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="160.00" y="130.00" width="600.00" height="250.00" id="60" stroke="black" fill="transparent" stroke-width="4">
+    <animate id="slide3obj60step1" attributeName="opacity" from="0" to="0" dur="9.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj60step2" attributeName="opacity" from="0" to="1" dur="9.00" begin="slide3obj60step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <line x1="160.000000" y1="380.000000" x2="760.000000" y2="130.000000" id="80" stroke="black" stroke-width="4" >
+    <animate id="slide3obj80step1" attributeName="opacity" from="0" to="0" dur="10.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj80step2" attributeName="opacity" from="0" to="1" dur="10.50" begin="slide3obj80step1.end" repeatCount="1" restart="always" />
+   </line>
+   <text x="50.00" y="250.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Employee
+    <animate id="slide3obj76step1" attributeName="opacity" from="0" to="0" dur="12.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj76step2" attributeName="opacity" from="0" to="1" dur="12.00" begin="slide3obj76step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="50.00" y="275.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Effort
+    <animate id="slide3obj77step1" attributeName="opacity" from="0" to="0" dur="13.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj77step2" attributeName="opacity" from="0" to="1" dur="13.50" begin="slide3obj77step1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="125.00" y="100.00" width="30.00" height="30.00" id="58" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide3obj58step1" attributeName="opacity" from="0" to="0" dur="15.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj58step2" attributeName="opacity" from="0" to="1" dur="15.00" begin="slide3obj58step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <rect x="125.00" y="385.00" width="30.00" height="30.00" id="59" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide3obj59step1" attributeName="opacity" from="0" to="0" dur="16.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj59step2" attributeName="opacity" from="0" to="1" dur="16.50" begin="slide3obj59step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <text x="170.00" y="415.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Toxic
+    <animate id="slide3obj69step1" attributeName="opacity" from="0" to="0" dur="18.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj69step2" attributeName="opacity" from="0" to="1" dur="18.00" begin="slide3obj69step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="255.00" y="415.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Fearful
+    <animate id="slide3obj70step1" attributeName="opacity" from="0" to="0" dur="19.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj70step2" attributeName="opacity" from="0" to="1" dur="19.50" begin="slide3obj70step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="335.00" y="415.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Antagonistic
+    <animate id="slide3obj71step1" attributeName="opacity" from="0" to="0" dur="21.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj71step2" attributeName="opacity" from="0" to="1" dur="21.00" begin="slide3obj71step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="455.00" y="415.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Impersonal
+    <animate id="slide3obj72step1" attributeName="opacity" from="0" to="0" dur="22.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj72step2" attributeName="opacity" from="0" to="1" dur="22.50" begin="slide3obj72step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="570.00" y="415.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Collaborative
+    <animate id="slide3obj73step1" attributeName="opacity" from="0" to="0" dur="24.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj73step2" attributeName="opacity" from="0" to="1" dur="24.00" begin="slide3obj73step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="690.00" y="415.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Caring
+    <animate id="slide3obj74step1" attributeName="opacity" from="0" to="0" dur="25.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj74step2" attributeName="opacity" from="0" to="1" dur="25.50" begin="slide3obj74step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="380.00" y="450.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Leader Climate
+    <animate id="slide3obj75step1" attributeName="opacity" from="0" to="0" dur="27.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj75step2" attributeName="opacity" from="0" to="1" dur="27.00" begin="slide3obj75step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="820.00" y="335.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">High Performance
+    <animate id="slide3obj78step1" attributeName="opacity" from="0" to="0" dur="28.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj78step2" attributeName="opacity" from="0" to="1" dur="28.50" begin="slide3obj78step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="870.00" y="355.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Teams
+    <animate id="slide3obj79step1" attributeName="opacity" from="0" to="0" dur="30.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj79step2" attributeName="opacity" from="0" to="1" dur="30.00" begin="slide3obj79step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="625.00" y="520.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">High Emotional Intelligence
+    <animate id="slide3obj81step1" attributeName="opacity" from="0" to="0" dur="31.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj81step2" attributeName="opacity" from="0" to="1" dur="31.50" begin="slide3obj81step1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="562.00" y="120.00" width="190.00" height="270.00" id="61" stroke="black" fill="transparent" stroke-width="4">
+    <animate id="slide3obj61step1" attributeName="opacity" from="0" to="0" dur="33.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj61step2" attributeName="opacity" from="0" to="1" dur="33.00" begin="slide3obj61step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <rect x="602.00" y="200.00" width="60.00" height="40.00" id="128" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide3obj128step1" attributeName="opacity" from="0" to="0" dur="34.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj128step2" attributeName="opacity" from="0" to="1" dur="34.50" begin="slide3obj128step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <rect x="815.00" y="295.00" width="60.00" height="40.00" id="62" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide3obj62step1" attributeName="opacity" from="0" to="0" dur="36.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj62step2" attributeName="opacity" from="0" to="1" dur="36.00" begin="slide3obj62step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <rect x="715.00" y="490.00" width="60.00" height="40.00" id="63" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide3obj63step1" attributeName="opacity" from="0" to="0" dur="37.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj63step2" attributeName="opacity" from="0" to="1" dur="37.50" begin="slide3obj63step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <rect x="645.00" y="390.00" width="60.00" height="40.00" id="64" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide3obj64step1" attributeName="opacity" from="0" to="0" dur="39.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj64step2" attributeName="opacity" from="0" to="1" dur="39.00" begin="slide3obj64step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <line x1="140.00" y1="130.00" x2="140.00" y2="364.00" stroke="black" stroke-width="4" marker-end="url(#arrowhead)">
+    <animate id="slide3obj59step1" attributeName="opacity" from="0" to="0" dur="16.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj59step2" attributeName="opacity" from="0" to="1" dur="16.50" begin="slide3obj59step1.end" repeatCount="1" restart="always" />
+   </line>
+   <line x1="140.00" y1="385.00" x2="140.00" y2="151.00" stroke="black" stroke-width="4" marker-end="url(#arrowhead)">
+    <animate id="slide3obj58step1" attributeName="opacity" from="0" to="0" dur="15.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj58step2" attributeName="opacity" from="0" to="1" dur="15.00" begin="slide3obj58step1.end" repeatCount="1" restart="always" />
+   </line>
+   <line x1="815.00" y1="301.62" x2="681.18" y2="241.93" stroke="black" stroke-width="4" marker-end="url(#arrowhead)">
+    <animate id="slide3obj128step1" attributeName="opacity" from="0" to="0" dur="34.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj128step2" attributeName="opacity" from="0" to="1" dur="34.50" begin="slide3obj128step1.end" repeatCount="1" restart="always" />
+   </line>
+   <line x1="731.00" y1="490.00" x2="701.04" y2="447.20" stroke="black" stroke-width="4" marker-end="url(#arrowhead)">
+    <animate id="slide3obj64step1" attributeName="opacity" from="0" to="0" dur="39.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide3obj64step2" attributeName="opacity" from="0" to="1" dur="39.00" begin="slide3obj64step1.end" repeatCount="1" restart="always" />
+   </line>
+  </g>
+  <marker id="arrowhead" markerWidth="5" markerHeight="3.5" refX="0" refY="1.75" orient="auto">
+   <polygon points="0 0, 5 1.75 0 3.5"></polygon>
+  </marker>
+ </defs>
+ <defs>
+  <g id="slide4-def">
+   <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="black" font-size="32px">
+    <animate id="slide4beginstep1" attributeName="opacity" from="0" to="0" dur="0.10" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide4beginstep2" attributeName="opacity" from="0" to="1" dur="0.10" begin="slide4beginstep1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="260.00" y="210.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="24px">Do I really need to care about soft skills?
+    <animate id="slide4obj87step1" attributeName="opacity" from="0" to="0" dur="3.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide4obj87step2" attributeName="opacity" from="0" to="1" dur="3.00" begin="slide4obj87step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="310.00" y="280.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="24px">I just want to write great code.
+    <animate id="slide4obj88step1" attributeName="opacity" from="0" to="0" dur="4.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide4obj88step2" attributeName="opacity" from="0" to="1" dur="4.50" begin="slide4obj88step1.end" repeatCount="1" restart="always" />
+   </text>
+  </g>
+  <marker id="arrowhead" markerWidth="5" markerHeight="3.5" refX="0" refY="1.75" orient="auto">
+   <polygon points="0 0, 5 1.75 0 3.5"></polygon>
+  </marker>
+ </defs>
+ <defs>
+  <g id="slide5-def">
+   <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="black" font-size="32px">
+    <animate id="slide5beginstep1" attributeName="opacity" from="0" to="0" dur="0.10" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide5beginstep2" attributeName="opacity" from="0" to="1" dur="0.10" begin="slide5beginstep1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="240.00" y="95.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="24px">Emotional Intelligence helps you get more done
+    <animate id="slide5obj92step1" attributeName="opacity" from="0" to="0" dur="3.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide5obj92step2" attributeName="opacity" from="0" to="1" dur="3.00" begin="slide5obj92step1.end" repeatCount="1" restart="always" />
+   </text>
+   <circle cx="415.000000" cy="270.000000" r="70.000000" id="93" stroke="black" fill="transparent" stroke-width="4" >
+    <animate id="slide5obj93step1" attributeName="opacity" from="0" to="0" dur="4.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide5obj93step2" attributeName="opacity" from="0" to="1" dur="4.50" begin="slide5obj93step1.end" repeatCount="1" restart="always" />
+   </circle>
+   <text x="375.00" y="268.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Technical
+    <animate id="slide5obj95step1" attributeName="opacity" from="0" to="0" dur="6.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide5obj95step2" attributeName="opacity" from="0" to="1" dur="6.00" begin="slide5obj95step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="390.00" y="288.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Skills
+    <animate id="slide5obj96step1" attributeName="opacity" from="0" to="0" dur="7.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide5obj96step2" attributeName="opacity" from="0" to="1" dur="7.50" begin="slide5obj96step1.end" repeatCount="1" restart="always" />
+   </text>
+   <circle cx="545.000000" cy="270.000000" r="70.000000" id="94" stroke="black" fill="transparent" stroke-width="4" >
+    <animate id="slide5obj94step1" attributeName="opacity" from="0" to="0" dur="9.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide5obj94step2" attributeName="opacity" from="0" to="1" dur="9.00" begin="slide5obj94step1.end" repeatCount="1" restart="always" />
+   </circle>
+   <text x="505.00" y="268.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Emotional
+    <animate id="slide5obj97step1" attributeName="opacity" from="0" to="0" dur="10.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide5obj97step2" attributeName="opacity" from="0" to="1" dur="10.50" begin="slide5obj97step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="500.00" y="288.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Intelligence
+    <animate id="slide5obj98step1" attributeName="opacity" from="0" to="0" dur="12.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide5obj98step2" attributeName="opacity" from="0" to="1" dur="12.00" begin="slide5obj98step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="270.00" y="428.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Lack of these skills
+    <animate id="slide5obj99step1" attributeName="opacity" from="0" to="0" dur="13.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide5obj99step2" attributeName="opacity" from="0" to="1" dur="13.50" begin="slide5obj99step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="430.00" y="428.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">will slow you down
+    <animate id="slide5obj100step1" attributeName="opacity" from="0" to="0" dur="15.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide5obj100step2" attributeName="opacity" from="0" to="1" dur="15.00" begin="slide5obj100step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="320.00" y="453.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">and create barriers to success.
+    <animate id="slide5obj101step1" attributeName="opacity" from="0" to="0" dur="16.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide5obj101step2" attributeName="opacity" from="0" to="1" dur="16.50" begin="slide5obj101step1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="390.00" y="410.00" width="40.00" height="40.00" id="90" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide5obj90step1" attributeName="opacity" from="0" to="0" dur="18.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide5obj90step2" attributeName="opacity" from="0" to="1" dur="18.00" begin="slide5obj90step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <rect x="495.00" y="305.00" width="40.00" height="40.00" id="91" stroke="black" fill="transparent" stroke-width="0">
+    <animate id="slide5obj91step1" attributeName="opacity" from="0" to="0" dur="19.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide5obj91step2" attributeName="opacity" from="0" to="1" dur="19.50" begin="slide5obj91step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <line x1="430.00" y1="410.00" x2="480.15" y2="359.85" stroke="black" stroke-width="4" marker-end="url(#arrowhead)">
+    <animate id="slide5obj91step1" attributeName="opacity" from="0" to="0" dur="19.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide5obj91step2" attributeName="opacity" from="0" to="1" dur="19.50" begin="slide5obj91step1.end" repeatCount="1" restart="always" />
+   </line>
+  </g>
+  <marker id="arrowhead" markerWidth="5" markerHeight="3.5" refX="0" refY="1.75" orient="auto">
+   <polygon points="0 0, 5 1.75 0 3.5"></polygon>
+  </marker>
+ </defs>
+ <defs>
+  <g id="slide6-def">
+   <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="black" font-size="32px">
+    <animate id="slide6beginstep1" attributeName="opacity" from="0" to="0" dur="0.10" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide6beginstep2" attributeName="opacity" from="0" to="1" dur="0.10" begin="slide6beginstep1.end" repeatCount="1" restart="always" />
+   </text>
+   <rect x="115.00" y="20.00" width="360.00" height="280.00" id="104" stroke="black" fill="transparent" stroke-width="4">
+    <animate id="slide6obj104step1" attributeName="opacity" from="0" to="0" dur="3.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide6obj104step2" attributeName="opacity" from="0" to="1" dur="3.00" begin="slide6obj104step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <rect x="115.00" y="300.00" width="360.00" height="280.00" id="105" stroke="black" fill="transparent" stroke-width="4">
+    <animate id="slide6obj105step1" attributeName="opacity" from="0" to="0" dur="4.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide6obj105step2" attributeName="opacity" from="0" to="1" dur="4.50" begin="slide6obj105step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <rect x="475.00" y="20.00" width="360.00" height="280.00" id="106" stroke="black" fill="transparent" stroke-width="4">
+    <animate id="slide6obj106step1" attributeName="opacity" from="0" to="0" dur="6.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide6obj106step2" attributeName="opacity" from="0" to="1" dur="6.00" begin="slide6obj106step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <rect x="475.00" y="300.00" width="360.00" height="280.00" id="107" stroke="black" fill="transparent" stroke-width="4">
+    <animate id="slide6obj107step1" attributeName="opacity" from="0" to="0" dur="7.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide6obj107step2" attributeName="opacity" from="0" to="1" dur="7.50" begin="slide6obj107step1.end" repeatCount="1" restart="always" />
+   </rect>
+   <text x="220.00" y="60.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="24px">Self Awareness
+    <animate id="slide6obj110step1" attributeName="opacity" from="0" to="0" dur="9.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide6obj110step2" attributeName="opacity" from="0" to="1" dur="9.00" begin="slide6obj110step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="180.00" y="150.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Self Confidence
+    <animate id="slide6obj111step1" attributeName="opacity" from="0" to="0" dur="10.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide6obj111step2" attributeName="opacity" from="0" to="1" dur="10.50" begin="slide6obj111step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="180.00" y="185.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Self Assessment
+    <animate id="slide6obj112step1" attributeName="opacity" from="0" to="0" dur="12.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide6obj112step2" attributeName="opacity" from="0" to="1" dur="12.00" begin="slide6obj112step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="180.00" y="220.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Self Awareness
+    <animate id="slide6obj113step1" attributeName="opacity" from="0" to="0" dur="13.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide6obj113step2" attributeName="opacity" from="0" to="1" dur="13.50" begin="slide6obj113step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="575.00" y="60.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="24px">Social Awareness
+    <animate id="slide6obj114step1" attributeName="opacity" from="0" to="0" dur="15.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide6obj114step2" attributeName="opacity" from="0" to="1" dur="15.00" begin="slide6obj114step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="525.00" y="160.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Empathy
+    <animate id="slide6obj115step1" attributeName="opacity" from="0" to="0" dur="16.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide6obj115step2" attributeName="opacity" from="0" to="1" dur="16.50" begin="slide6obj115step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="525.00" y="195.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Organizational Awareness
+    <animate id="slide6obj116step1" attributeName="opacity" from="0" to="0" dur="18.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide6obj116step2" attributeName="opacity" from="0" to="1" dur="18.00" begin="slide6obj116step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="210.00" y="340.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="24px">Self Management
+    <animate id="slide6obj117step1" attributeName="opacity" from="0" to="0" dur="19.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide6obj117step2" attributeName="opacity" from="0" to="1" dur="19.50" begin="slide6obj117step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="180.00" y="400.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Self Control
+    <animate id="slide6obj118step1" attributeName="opacity" from="0" to="0" dur="21.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide6obj118step2" attributeName="opacity" from="0" to="1" dur="21.00" begin="slide6obj118step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="180.00" y="435.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Trustworthiness
+    <animate id="slide6obj119step1" attributeName="opacity" from="0" to="0" dur="22.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide6obj119step2" attributeName="opacity" from="0" to="1" dur="22.50" begin="slide6obj119step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="180.00" y="470.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Motivation
+    <animate id="slide6obj120step1" attributeName="opacity" from="0" to="0" dur="24.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide6obj120step2" attributeName="opacity" from="0" to="1" dur="24.00" begin="slide6obj120step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="180.00" y="505.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Disipline
+    <animate id="slide6obj121step1" attributeName="opacity" from="0" to="0" dur="25.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide6obj121step2" attributeName="opacity" from="0" to="1" dur="25.50" begin="slide6obj121step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="180.00" y="545.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Optimism
+    <animate id="slide6obj122step1" attributeName="opacity" from="0" to="0" dur="27.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide6obj122step2" attributeName="opacity" from="0" to="1" dur="27.00" begin="slide6obj122step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="525.00" y="340.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="24px">Relationship Management
+    <animate id="slide6obj123step1" attributeName="opacity" from="0" to="0" dur="28.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide6obj123step2" attributeName="opacity" from="0" to="1" dur="28.50" begin="slide6obj123step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="525.00" y="410.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Influence
+    <animate id="slide6obj124step1" attributeName="opacity" from="0" to="0" dur="30.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide6obj124step2" attributeName="opacity" from="0" to="1" dur="30.00" begin="slide6obj124step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="525.00" y="445.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Conflict Management
+    <animate id="slide6obj125step1" attributeName="opacity" from="0" to="0" dur="31.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide6obj125step2" attributeName="opacity" from="0" to="1" dur="31.50" begin="slide6obj125step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="525.00" y="480.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Relationships
+    <animate id="slide6obj126step1" attributeName="opacity" from="0" to="0" dur="33.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide6obj126step2" attributeName="opacity" from="0" to="1" dur="33.00" begin="slide6obj126step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="525.00" y="515.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="20px">Teamwork &amp; Collaboration
+    <animate id="slide6obj127step1" attributeName="opacity" from="0" to="0" dur="34.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide6obj127step2" attributeName="opacity" from="0" to="1" dur="34.50" begin="slide6obj127step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="310.00" y="620.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="36px">Emotional
+    <animate id="slide6obj108step1" attributeName="opacity" from="0" to="0" dur="36.00" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide6obj108step2" attributeName="opacity" from="0" to="1" dur="36.00" begin="slide6obj108step1.end" repeatCount="1" restart="always" />
+   </text>
+   <text x="475.00" y="620.00" fill="black" dominant-baseline="auto" text-anchor="start" font-size="36px">Intelligence
+    <animate id="slide6obj109step1" attributeName="opacity" from="0" to="0" dur="37.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide6obj109step2" attributeName="opacity" from="0" to="1" dur="37.50" begin="slide6obj109step1.end" repeatCount="1" restart="always" />
+   </text>
+  </g>
+  <marker id="arrowhead" markerWidth="5" markerHeight="3.5" refX="0" refY="1.75" orient="auto">
+   <polygon points="0 0, 5 1.75 0 3.5"></polygon>
+  </marker>
+ </defs>
+ <script type="text/javascript">
+  var svgNS = "http://www.w3.org/2000/svg";
+  var xlinkNS = "http://www.w3.org/1999/xlink";
+  var currentIndex = 1;
+  var maxIndex = 6;
+  function previousSlide(evt) {
+  prevIndex = currentIndex - 1;
+  if (prevIndex === 0) {
+   prevIndex = 1;
+  }
+   canvas = document.getElementById('canvas');
+   prevslide = document.getElementById('slide' + currentIndex);
+   nextslide = document.createElementNS(svgNS, "use");
+   nextslide.setAttributeNS(null, "id", "slide" + prevIndex);
+   nextslide.setAttributeNS(null, "x", 0);
+   nextslide.setAttributeNS(null, "y", 0);
+   nextslide.setAttributeNS(xlinkNS, "xlink:href", "#" + nextslide.id + "-def");
+   canvas.removeChild(prevslide)
+   canvas.appendChild(nextslide)
+   var animations = Array.from(svg.querySelectorAll("animate"));
+   animations.forEach(function (item, index) {
+    if (item.id.includes('step1')) {
+     item.beginElement();
+    }
+   });
+   currentIndex = prevIndex
+  }
+  function nextSlide(evt) {
+   nextIndex = currentIndex + 1;
+   if (nextIndex > maxIndex) {
+    nextIndex = maxIndex;
+   }
+   svg = document.getElementById('canvas');
+   prevslide = document.getElementById('slide' + currentIndex);
+   nextslide = document.createElementNS(svgNS, "use");
+   nextslide.setAttributeNS(null, "id", "slide" + nextIndex);
+   nextslide.setAttributeNS(null, "x", 0);
+   nextslide.setAttributeNS(null, "y", 0);
+   nextslide.setAttributeNS(xlinkNS, "xlink:href", "#" + nextslide.id + "-def");
+   svg.removeChild(prevslide)
+   svg.appendChild(nextslide)
+   var animations = Array.from(svg.querySelectorAll("animate"));
+   animations.forEach(function (item, index) {
+    if (item.id.includes('step1')) {
+     item.beginElement();
+    }
+   });
+   currentIndex = nextIndex
+  }
+ </script>
+ <style>
+  .nextslide-transition {	animation-name: transitionOpacity;	animation-duration: 6s;	animation-iteration-count: 1;}
+  @keyframes transitionOpacity {
+   0%   { opacity: 0; }
+   50%   { opacity: 0; }
+   100% { opacity: 1; }
+  }
+ </style>
+</svg>
+

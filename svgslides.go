@@ -171,12 +171,19 @@ func (slides *SvgSlides) AddAnimation(autoPlay bool) error {
 
 func (slides *SvgSlides) Render(buffer *bytes.Buffer) error {
 
-	err := slides.render(buffer)
+	err := slides.render(buffer, -1)
 
 	return err
 }
 
-func (slides *SvgSlides) render(buffer *bytes.Buffer) error {
+func (slides *SvgSlides) RenderSlide(buffer *bytes.Buffer, slideId int) error {
+
+	err := slides.render(buffer, slideId)
+
+	return err
+}
+
+func (slides *SvgSlides) render(buffer *bytes.Buffer, slideId int) error {
 
 	fmt.Fprintf(buffer, "<svg id=\"canvas\" width=\"%.2f\" height=\"%.2f\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" >\n", slides.Config.Width, slides.Config.Height)
 
@@ -192,7 +199,9 @@ func (slides *SvgSlides) render(buffer *bytes.Buffer) error {
 	slides.Animation.updateSequence(slides)
 
 	for _, slide := range slides.Slides {
-		slide.render(buffer, slides.Config, slides.Animation)
+		if slideId == slide.Id || slideId == -1 {
+			slide.render(buffer, slides.Config, slides.Animation)
+		}
 	}
 
 	if len(slides.Slides) > 1 {
