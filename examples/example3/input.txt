@@ -146,5 +146,5 @@
     "currentSlideId":6,
     "nextSlideId":7,
     "nextObjId":128,
-    "animation":{"enabled":true,"autoPlay":true,"sequence":null}
+    "animation":{"enabled":true,"autoPlay":true,"duration":2,"sequence":null}
 }

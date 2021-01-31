@@ -39,16 +39,16 @@
     <animate id="slide1obj4step2" attributeName="opacity" from="0" to="1" dur="6.00" begin="slide1obj4step1.end" repeatCount="1" restart="always" />
    </text>
    <rect x="678.00" y="132.00" width="180.00" height="120.00" id="5" stroke="black" fill="transparent" stroke-width="4">
-    <animate id="slide1obj5step1" attributeName="opacity" from="0" to="0" dur="7.50" begin="0s" repeatCount="1" restart="always" />
-    <animate id="slide1obj5step2" attributeName="opacity" from="0" to="1" dur="7.50" begin="slide1obj5step1.end" repeatCount="1" restart="always" />
+    <animate id="slide1endstep1" attributeName="opacity" from="0" to="0" dur="7.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1endstep2" attributeName="opacity" from="0" to="1" dur="7.50" begin="slide1endstep1.end" repeatCount="1" restart="always" />
    </rect>
    <text x="768.00" y="180.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="24px">In SVG
-    <animate id="slide1obj5step1" attributeName="opacity" from="0" to="0" dur="7.50" begin="0s" repeatCount="1" restart="always" />
-    <animate id="slide1obj5step2" attributeName="opacity" from="0" to="1" dur="7.50" begin="slide1obj5step1.end" repeatCount="1" restart="always" />
+    <animate id="slide1endstep1" attributeName="opacity" from="0" to="0" dur="7.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1endstep2" attributeName="opacity" from="0" to="1" dur="7.50" begin="slide1endstep1.end" repeatCount="1" restart="always" />
    </text>
    <text x="768.00" y="204.00" fill="black" dominant-baseline="middle" text-anchor="middle" font-size="24px">Format
-    <animate id="slide1obj5step1" attributeName="opacity" from="0" to="0" dur="7.50" begin="0s" repeatCount="1" restart="always" />
-    <animate id="slide1obj5step2" attributeName="opacity" from="0" to="1" dur="7.50" begin="slide1obj5step1.end" repeatCount="1" restart="always" />
+    <animate id="slide1endstep1" attributeName="opacity" from="0" to="0" dur="7.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1endstep2" attributeName="opacity" from="0" to="1" dur="7.50" begin="slide1endstep1.end" repeatCount="1" restart="always" />
    </text>
    <line x1="256.00" y1="252.00" x2="256.00" y2="495.00" stroke="black" stroke-width="4" marker-end="url(#arrowhead)">
     <animate id="slide1obj3step1" attributeName="opacity" from="0" to="0" dur="4.50" begin="0s" repeatCount="1" restart="always" />
@@ -59,8 +59,8 @@
     <animate id="slide1obj4step2" attributeName="opacity" from="0" to="1" dur="6.00" begin="slide1obj4step1.end" repeatCount="1" restart="always" />
    </line>
    <line x1="768.00" y1="516.00" x2="768.00" y2="273.00" stroke="black" stroke-width="4" marker-end="url(#arrowhead)">
-    <animate id="slide1obj5step1" attributeName="opacity" from="0" to="0" dur="7.50" begin="0s" repeatCount="1" restart="always" />
-    <animate id="slide1obj5step2" attributeName="opacity" from="0" to="1" dur="7.50" begin="slide1obj5step1.end" repeatCount="1" restart="always" />
+    <animate id="slide1endstep1" attributeName="opacity" from="0" to="0" dur="7.50" begin="0s" repeatCount="1" restart="always" />
+    <animate id="slide1endstep2" attributeName="opacity" from="0" to="1" dur="7.50" begin="slide1endstep1.end" repeatCount="1" restart="always" />
    </line>
   </g>
   <marker id="arrowhead" markerWidth="5" markerHeight="3.5" refX="0" refY="1.75" orient="auto">

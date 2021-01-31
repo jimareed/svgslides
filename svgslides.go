@@ -187,14 +187,17 @@ func (slides *SvgSlides) render(buffer *bytes.Buffer, slideId int) error {
 
 	fmt.Fprintf(buffer, "<svg id=\"canvas\" width=\"%.2f\" height=\"%.2f\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" >\n", slides.Config.Width, slides.Config.Height)
 
-	if len(slides.Slides) > 0 {
-		fmt.Fprintf(buffer, " <use id=\"slide%d\" xlink:href=\"#slide%d-def\" x=\"0\" y=\"0\" />\n", slides.Slides[0].Id, slides.Slides[0].Id)
+	for _, slide := range slides.Slides {
+		fmt.Fprintf(buffer, " <use id=\"slide%d\" xlink:href=\"#slide%d-def\" x=\"0\" y=\"0\" />\n", slide.Id, slide.Id)
 	}
 
-	if len(slides.Slides) > 1 {
-		fmt.Fprintf(buffer, " <polygon class=\"nextslide-transition\" points=\"990 740, 975 753 990 766\"    stroke=\"lightgrey\" fill=\"lightgrey\" onmousedown=\"previousSlide(evt)\" onmouseover=\"evt.target.setAttribute('fill', 'black');\" onmouseout=\"evt.target.setAttribute('fill','lightgrey');\"></polygon>\n")
-		fmt.Fprintf(buffer, " <polygon class=\"nextslide-transition\" points=\"1000 740, 1015 753 1000 766\" stroke=\"lightgrey\" fill=\"lightgrey\" onmousedown=\"nextSlide(evt)\"     onmouseover=\"evt.target.setAttribute('fill', 'black');\" onmouseout=\"evt.target.setAttribute('fill','lightgrey');\"></polygon>\n")
+	if len(slides.Slides) > 0 {
 	}
+
+	//	if len(slides.Slides) > 1 { // page buttons
+	//		fmt.Fprintf(buffer, " <polygon class=\"nextslide-transition\" points=\"990 740, 975 753 990 766\"    stroke=\"lightgrey\" fill=\"lightgrey\" onmousedown=\"previousSlide(evt)\" onmouseover=\"evt.target.setAttribute('fill', 'black');\" onmouseout=\"evt.target.setAttribute('fill','lightgrey');\"></polygon>\n")
+	//		fmt.Fprintf(buffer, " <polygon class=\"nextslide-transition\" points=\"1000 740, 1015 753 1000 766\" stroke=\"lightgrey\" fill=\"lightgrey\" onmousedown=\"nextSlide(evt)\"     onmouseover=\"evt.target.setAttribute('fill', 'black');\" onmouseout=\"evt.target.setAttribute('fill','lightgrey');\"></polygon>\n")
+	//	}
 
 	slides.Animation.updateSequence(slides)
 
@@ -202,10 +205,6 @@ func (slides *SvgSlides) render(buffer *bytes.Buffer, slideId int) error {
 		if slideId == slide.Id || slideId == -1 {
 			slide.render(buffer, slides.Config, slides.Animation)
 		}
-	}
-
-	if len(slides.Slides) > 1 {
-		slides.renderPageButtons(buffer)
 	}
 
 	fmt.Fprintf(buffer, "</svg>\n")
@@ -223,10 +222,10 @@ func (slides *SvgSlides) renderPageButtons(buffer *bytes.Buffer) error {
 
 	fmt.Fprintf(buffer, "  function previousSlide(evt) {\n")
 
-	fmt.Fprintf(buffer, "  prevIndex = currentIndex - 1;\n")
-	fmt.Fprintf(buffer, "  if (prevIndex === 0) {\n")
-	fmt.Fprintf(buffer, "   prevIndex = 1;\n")
-	fmt.Fprintf(buffer, "  }\n")
+	fmt.Fprintf(buffer, "   prevIndex = currentIndex - 1;\n")
+	fmt.Fprintf(buffer, "   if (prevIndex === 0) {\n")
+	fmt.Fprintf(buffer, "    prevIndex = 1;\n")
+	fmt.Fprintf(buffer, "   }\n")
 
 	fmt.Fprintf(buffer, "   canvas = document.getElementById('canvas');\n")
 	fmt.Fprintf(buffer, "   prevslide = document.getElementById('slide' + currentIndex);\n")
